@@ -1,0 +1,16 @@
+*~
+*.diff
+*.patch
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+.project
+.settings
+.DS_Store
+
+npm-debug.log
+node_modules
