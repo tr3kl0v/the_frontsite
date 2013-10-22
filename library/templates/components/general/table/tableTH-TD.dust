@@ -1,0 +1,6 @@
+{#table-th}
+	<th {#status}class="{status}"{/status} {#id}id="{id}"{/id} {#scope}scope="{scope}"{/scope}>{text}</th>
+{/table-th}
+{#table-td}
+	<td {#status}class="{status}"{/status} {#id}id="{id}"{/id}>{text}</td>
+{/table-td}

@@ -1,0 +1,115 @@
+/*   Header
+---------------------------------------------- */
+header.pageHeader {font-size:1.2em; display:block; position:fixed; top:0; width:100%; z-index:100;background-color:$mainNavBackgroundColor;
+	&.fullScreen{top:-41px;}
+
+	/*   Logo
+	---------------------------------------------- */
+	.productLogo {float:left; margin:0; padding:7px 40px 4px 10px;
+		a {background:$elssLogo 0 3px no-repeat; color:#fff; display:block; font-family:$logoFont; min-height:30px; text-decoration:none; text-indent:0;
+			strong {font-size:2.3em; font-weight:600; letter-spacing:-0.02em; line-height:1em; padding-left:25px; text-transform:uppercase;}
+			sup {font-size:1.45em; line-height:1em; font-weight:200; vertical-align:top;}
+			span {display:inline-block; line-height:1em; padding:1px 0 0 5px; vertical-align:top;}
+			span.tagline {font-size:2.3em; letter-spacing:-0.02em; margin-top:-1px; padding-top:0;}
+		}
+	}
+
+	/*   Main navigation
+	---------------------------------------------- */
+	.mainNav {font-size:1.2em; position:relative;
+		//level 0
+		ul {float:left; margin:0; padding:0;
+			&.devices {display:none; font-family:'elss';font-size:2.2em;
+				.icon {font-size:0.7em; line-height:0.8em;}
+			}
+			&.login {float:right;
+				> li {background-color:$mainNavBackgroundLoginColor; font-weight:700; padding-left:27px;
+					ul{right:10px;font-weight:normal;}
+				}
+			}
+			&.notificationCenter {float:right;}
+			li {display:block; float:left; padding:0;position:relative;
+				> a {color:#ddd; display:block; padding:14px 27px 12px 0; text-decoration:none;
+					span {background:none;}
+					&.hasChildren {background:url("#{$assetPath}/arrow-down.png") 100% 58% no-repeat; margin-right:20px; padding-right:14px;}
+					&:hover {color:#fff;}
+				}
+
+				// fold-out 
+				ul {background-color:#fff; box-shadow:0 5px 10px rgba(0, 0, 0, 0.2); display:none; max-width:200px; padding:5px 0; position:absolute; top:34px; z-index:100;
+					li {font-size:1em; padding:0 20px; min-width:160px;
+						a {color:#1e1e1e;
+							&.hasChildren {background:url("#{$assetPath}/arrow-right.png") 100% 19px no-repeat; margin-right:20px; padding-right:14px;}
+							&:hover {color:#1e1e1e;}
+						}
+						ul {display:none; left:150px; top:0;}
+						&:last-child {background-color:#fff; font-weight:400; padding-left:20px;}
+					}
+				}
+				&:hover {
+					> ul {display:block;}
+				}
+				.flyout, {background: #ffffff; border: 1px solid #999999; border-radius:7px; box-shadow:0px 0px 20px #ccc; display:none; font-weight:300; position: absolute; padding:15px; left:-130px; top:50px; width:230px;
+					&:before {@include simple-transform(1, 45deg, 20px, 20px, 20deg, 20deg);
+						background: #ffffff;bottom: 100%; border: solid transparent; content: " "; border-top:1px solid #999; border-left:1px solid #999; height: 10px; left:130px; top:-35px; width: 10px; position: absolute; pointer-events: none;}
+					h2{color:#444444;font-size:1.3em;margin-bottom:15px;}
+					.notification{background:#f3f3f3;border:1px solid #666666; font-size:0.6em; margin:10px 0; padding:10px; position:relative;
+						h3{color:#000; font-weight:500;font-size:1.8em;margin-bottom:5px;}
+						h4{color:$mainProductColor; font-weight:600;font-size:1.4em;line-height:1.4em;}
+						.closeButton{right:3px; top:3px;}
+						.textButton{color:$mainProductColor;padding: 0;font-weight: 600;margin: 5px 0;}
+					}
+				}							
+				&.logout{
+					>span{color:#fff; display:block; @include opacity(0.8); padding:14px 5px 12px 0; text-decoration:none;}
+					a {display:inline; padding:0;}
+				}
+			}						
+			@media screen and (max-width: $tabletBreak) {
+			    &.devices{display:block;}
+			    &.standard{
+			    	li{display:none;}
+			    }
+			}
+			@media screen and (max-width: $phoneBreak) {
+				&.notificationCenter{display:none;}
+			    &.login {display:none;}
+			}
+		}
+	}
+
+
+	/*   Fullscreen menu
+	---------------------------------------------- */
+	.fullScreenMenu{float:right;
+		ul {float:left; margin:0; padding:0;
+			&.login {
+				> li {background-color:$mainNavBackgroundLoginColor; font-weight:700; padding-left:27px;
+					ul{right:10px;font-weight:normal;}
+				}
+			}
+			li {display:block; float:left; padding:0;position:relative;
+				> a {@include opacity(0.5); color:#000; text-decoration:none; display:block; padding:14px 27px 12px 0;
+					&.icon{text-shadow:0px 1px 2px #333;}
+					&.hasChildren {background:url("#{$assetPath}/arrow-down.png") 100% 58% no-repeat; margin-right:20px; padding-right:14px;}
+					&:hover {@include opacity(1);}
+					&.active {@include opacity(1); font-weight:600;}
+				}
+
+				// fold-out 
+				ul {background-color:#fff; box-shadow:0 5px 10px rgba(0, 0, 0, 0.2); display:none; max-width:180px; padding:5px 0; position:absolute; right:0; top:34px; z-index:100;
+					li {font-size:1em; padding:0 20px; min-width:140px;
+						a {color:#1e1e1e;}
+						&:last-child {background-color:#fff; font-weight:400; padding-left:20px;}
+					}
+				}
+				&:hover {
+					ul {display:block;}
+				}						
+			}
+		}
+	}
+	/*   Notification flyOut
+	---------------------------------------------- */
+	.notificationFlyout {background-color:#e5e5e5; border:#bebebe solid 1px; box-shadow:0 2px 4px rgba(0, 0, 0, 0.2); display:none; height:452px; position:absolute; right:22px; top:72px; width:400px; z-index:200;}
+}

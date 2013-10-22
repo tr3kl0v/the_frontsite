@@ -1,0 +1,10 @@
+{	
+	"message" : [
+		{
+			"closeButton":true/false,
+			"class":string,
+			"text":string
+		}
+	]
+}
+		

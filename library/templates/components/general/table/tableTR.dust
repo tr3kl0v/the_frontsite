@@ -1,0 +1,7 @@
+{#table-tr}
+	<tr {#status}class="{status}"{/status} {#id}id="{id}"{/id}>
+		{#tableCells}
+			{>tableTH-TD /}
+		{/tableCells}
+	</tr>
+{/table-tr}

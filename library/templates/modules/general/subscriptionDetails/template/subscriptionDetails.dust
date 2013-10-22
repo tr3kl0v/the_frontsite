@@ -1,0 +1,7 @@
+<article id="subscriptionDetails">
+	<div id="subscriptions">
+		<h2>{title}</h2>
+		<p>{text}</p>
+		{>subscriptionList /}
+	</div>
+</article>

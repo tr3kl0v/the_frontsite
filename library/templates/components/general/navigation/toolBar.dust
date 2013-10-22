@@ -1,0 +1,24 @@
+{#toolBar}
+	<nav class="toolBar">
+		<div class="toolBarWrapper">
+			<ul class="standard">
+				{#standardLinks}
+					{>navLink /}
+				{/standardLinks}
+			</ul>
+			{#conditionalLinks}
+			<ul class="login">
+				{#loggedIn}
+					{#in}
+						{>navLink /}
+					{/in}
+				{:else}
+					{#out}
+						{>navLink /}
+					{/out}
+				{/loggedIn}
+			</ul>
+			{/conditionalLinks}
+		</div>
+	</nav>
+{/toolBar}

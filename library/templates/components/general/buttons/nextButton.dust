@@ -1,0 +1,3 @@
+{#nextButton}
+	<a class="icon nextButton{#status} {status}{/status}" href="{link}">{label} =</a>
+{/nextButton}

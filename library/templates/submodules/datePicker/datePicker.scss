@@ -1,0 +1,23 @@
+.datePicker{overflow:auto;clear:both;
+    .checkboxContainer{margin-top:12px;}
+    span{float:left;margin:12px 20px;}
+    .calendar{float:left;text-align:center;
+        .calendarInput{width:100px;}
+        .calendarIcon{margin:1px;}
+        .calendarPopup{background:#fff;border:1px solid #333;border-radius:5px;display:none;padding:3px;position:absolute;z-index:200;
+            header{@include gradient2Color(darken($mainProductColor, 10%), $mainProductColor);border-radius:5px;
+                .prevButton, .nextButton{@include opacity(0.9);color:#fff;display:inline;font-size:1.6em;padding:10px; margin:0;}
+                .nextButton{float:right;}
+                .dropdown{display:inline;font-size:1em;}
+            }
+            .dateTable{margin-bottom:0;width:100%;
+                .dateCell{padding:1px;
+                    a{background:#e6e6e6;border:#d3d3d3 solid 1px;color:#555;display:block;text-align:right;text-decoration:none;
+                        &:hover{background:#f3f3f3;}
+                        &.selected{background:#f3f3f3;}
+                    }
+                }
+            }
+        }
+    }
+}

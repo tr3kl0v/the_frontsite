@@ -1,0 +1,38 @@
+{#autoComplete}
+	<div class="autoComplete">
+		{#list}
+			<ul class="resultsList">
+				{#word}
+					{@math key="{$idx}" method="mod" operand="2"}
+						{@eq value=0}
+					        <li class="even">
+					    {:else}
+					        <li class="uneven">
+					    {/eq}
+					{/math}
+						{#isGroup}
+							<a href="#" class="multiTerm">
+								<span class="term">{groupName}...</span>
+								<span class="numChildren">+ {numChildren} other terms</span>
+							</a>
+						{:else}
+							{#synonym}
+								<a href="#">
+									<span class="term">{synonym}</span>
+									<span class="prefTerm">use: {use}</span>
+								</a>
+							{:else}
+								<a href="#">
+									<span class="term">{use}</span>
+								</a>
+							{/synonym}
+						{/isGroup}
+					</li>
+				{/word}
+			</ul>
+		{/list}
+		<div class="autoCompleteFooter">
+			
+		</div>
+	</div>
+{/autoComplete}

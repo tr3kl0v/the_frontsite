@@ -1,0 +1,3 @@
+{#pushButton}
+	<a class="pushButton{#status} {status}{/status}" href="{link}">{label}</a>
+{/pushButton}

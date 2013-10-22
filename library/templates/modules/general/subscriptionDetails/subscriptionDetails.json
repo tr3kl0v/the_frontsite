@@ -1,0 +1,15 @@
+{	
+	"subscriptionDetails" : [
+		{
+			"subscriptionList" : [
+				{
+					"listid" : "subscriptionList",
+					"links" : [
+						{"databaseName" : "", "dataPeriod": ""}
+					]
+				}
+			]
+		}
+	]
+}
+		

@@ -1,0 +1,81 @@
+<header class="pageHeader{#fullScreen} fullScreen{/fullScreen}">
+	{#productLogo}
+	<h1 class="productLogo">
+		{#links}
+			<a href="{href}" {#title}title="{title}"{/title}>{link|s}</a>
+		{/links}
+	</h1>
+	{/productLogo}
+
+	{#mainNav}
+	<nav class="mainNav" role="navigation">
+		<ul class="devices">
+			{#devices}
+				{>navLink /}
+			{/devices}
+		</ul>
+
+		<ul class="standard">
+			{#standardLinks}
+				{>navLink /}
+			{/standardLinks}
+		</ul>
+
+		<ul class="login">
+			{#conditionalLinks}
+			{#loggedIn}
+				{#in}
+					{>navLink /}
+				{/in}
+			{:else}
+				{#out}
+					{>navLink /}
+				{/out}
+			{/loggedIn}
+			{/conditionalLinks}
+		</ul>
+
+		{>notificationCenter /}
+
+	</nav>
+	{/mainNav}
+
+	{?fullScreenOption}
+	<div class="fullScreenMenu">
+		{?fullScreen}
+			<ul>
+				<li>
+					<a href="#" aria-hidden="true" class="icon avatar hasChildren">0</a>
+					{#mainNav}
+					<ul class="login">
+						{#conditionalLinks}
+						{#loggedIn}
+							{#in}
+								{>navLink /}
+							{/in}
+						{:else}
+							{#out}
+								{>navLink /}
+							{/out}
+						{/loggedIn}
+						{/conditionalLinks}
+					</ul>
+					{/mainNav}
+				</li>
+			</ul>
+			
+			<ul>
+				<li>
+					<a href="#" aria-hidden="true" class="icon contract">:</a>
+				</li>
+			</ul>
+		{:else}
+			<ul>
+				<li>
+					<a href="#" aria-hidden="true" class="icon expand">9</a>
+				</li>
+			</ul>
+		{/fullScreen}
+	</div>
+	{/fullScreenOption}
+</header>

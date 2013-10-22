@@ -1,0 +1,17 @@
+#messageWrapper{
+	.message{background:#e2f6fe; border:1px solid #00aff5; box-sizing:border-box; color:#0075d3; display:table; margin:10px auto; max-width:980px; overflow:auto; padding:10px; width:100%;
+		&.signup{background:#fff7c9; border:1px solid #dfa900; color:#444444;
+			.icon{color:#f7c427;}
+			.pushButton{background:#f7c427;}
+		}
+		&.global{background:#e3d9e8; border:1px solid #9b3d8b; color:#9b3d8b; margin-top:-5px; max-width:100%; padding:20px;}
+		> div{display:table-row; padding:5px; margin:0;
+			.icon{display:table-cell; float:none; font-size:18px;margin-right:10px; vertical-align:middle; width:30px;}
+			div{display:table-cell; vertical-align:middle;
+				h4{display:inline; font-weight:600;}
+			}
+			.pushButton{display:table-cell; border:none; color:#fff; padding:0; text-decoration:none; vertical-align:middle;}
+			.closeButton {background:none;}
+		}
+	}
+}

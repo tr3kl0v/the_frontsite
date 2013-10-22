@@ -1,0 +1,86 @@
+{
+	"datePicker": {
+		"checkbox": {"id" : "datePickerCheckbox","label" : "Records added from"},
+		"beginDate": {
+			"calendarField": {
+				"id" : "beginDate",
+				"prevButton":true,
+				"nextButton":true,
+				"dropdown": [
+					{
+						"id" : "monthPickerBegin",
+						"options" : [
+							{"value" : "jan", "label" : "Jan"},
+							{"value" : "feb", "label" : "Feb"},
+							{"value" : "mar", "label" : "Mar"},
+							{"value" : "apr", "label" : "Apr"},
+							{"value" : "may", "label" : "May"},
+							{"value" : "jun", "label" : "Jun"},
+							{"value" : "jul", "label" : "Jul"},
+							{"value" : "aug", "label" : "Aug"},
+							{"value" : "sep", "label" : "Sep"},
+							{"value" : "oct", "label" : "Oct"},
+							{"value" : "nov", "label" : "Nov"},
+							{"value" : "dec", "label" : "Dec"}
+						]
+					},
+					{
+						"id" : "yearPickerBegin",
+						"options" : [
+							{"value" : "2013", "label" : "2013"},
+							{"value" : "2012", "label" : "2012"},
+							{"value" : "2011", "label" : "2011"},
+							{"value" : "2010", "label" : "2010"},
+							{"value" : "2009", "label" : "2009"},
+							{"value" : "2008", "label" : "2008"},
+							{"value" : "2007", "label" : "2007"},
+							{"value" : "2006", "label" : "2006"}
+						]
+					}
+				],
+				"hintText": "(dd/mm/yyyy)"
+			}
+		},
+		"to": "to",
+		"endDate": {
+			"calendarField": {
+				"id" : "endDate",
+				"prevButton":true,
+				"nextButton":true,
+				"dropdown": [
+					{
+						"id" : "monthPickerEnd",
+						"options" : [
+							{"value" : "jan", "label" : "Jan"},
+							{"value" : "feb", "label" : "Feb"},
+							{"value" : "mar", "label" : "Mar"},
+							{"value" : "apr", "label" : "Apr"},
+							{"value" : "may", "label" : "May"},
+							{"value" : "jun", "label" : "Jun"},
+							{"value" : "jul", "label" : "Jul"},
+							{"value" : "aug", "label" : "Aug"},
+							{"value" : "sep", "label" : "Sep"},
+							{"value" : "oct", "label" : "Oct"},
+							{"value" : "nov", "label" : "Nov"},
+							{"value" : "dec", "label" : "Dec"}
+						]
+					},
+					{
+						"id" : "yearPickerEnd",
+						"options" : [
+							{"value" : "2013", "label" : "2013"},
+							{"value" : "2012", "label" : "2012"},
+							{"value" : "2011", "label" : "2011"},
+							{"value" : "2010", "label" : "2010"},
+							{"value" : "2009", "label" : "2009"},
+							{"value" : "2008", "label" : "2008"},
+							{"value" : "2007", "label" : "2007"},
+							{"value" : "2006", "label" : "2006"}
+						]
+					}
+				],
+				"hintText": "(dd/mm/yyyy)"
+			}
+		}
+	}
+}

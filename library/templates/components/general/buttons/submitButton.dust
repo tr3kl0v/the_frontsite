@@ -1,0 +1,3 @@
+{#submitButton}
+	<input class="submitButton{#status} {status}{/status}" {#id}id="{id}"{/id} type="submit" value="{value}" />
+{/submitButton}

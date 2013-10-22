@@ -1,0 +1,19 @@
+{#dateLimiter}
+	<fieldset class="dateLimiter">
+		<h3>{title}</h3>
+		
+		{#startYear}
+			{>dropdown /}
+		{/startYear}
+		
+		<span>to</span>
+		
+		{#endYear}
+			{>dropdown /}
+		{/endYear}
+		
+		<span>or</span>
+		
+		{>checkbox /}
+	</fieldset>
+{/dateLimiter}
