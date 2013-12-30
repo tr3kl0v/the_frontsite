@@ -1,3 +1,0 @@
-{#imageButton}
-	<a class="imageButton{#status} {status}{/status}" href="{link}">{label}</a>
-{/imageButton}

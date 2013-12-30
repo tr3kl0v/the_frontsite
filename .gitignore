@@ -8,9 +8,11 @@
 *.out
 *.pid
 *.gz
+.build
 .project
 .settings
 .DS_Store
 
 npm-debug.log
 node_modules
+bower_components

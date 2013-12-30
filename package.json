@@ -1,0 +1,71 @@
+{
+    "name": "The_FrontSide",
+    "version": "0.6.2",
+    "release": "Backside Rodeo 180",
+    "description": "An express-based Node.js web application asynchrone dust render engine which can run on server and client.",
+    "main": "server.js",
+    "scripts": {
+        "test": "grunt test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/paapster/the_frontsite.git"
+    },
+    "keywords": [
+        "node.js",
+        "node",
+        "javascript",
+        "js",
+        "web",
+        "mvc",
+        "framework",
+        "dustjs"
+    ],
+    "engineStrict": true,
+    "dependencies": {
+        "colors": "*",
+        "consolidate": "*",
+        "connect-mongo": "*",
+        "dustjs-helpers": "*",
+        "dustjs-linkedin": "*",
+        "express": "*",
+        "mongodb": "*",
+        "mongoose": "*",
+        "texts": "*",
+        "uglify-js": "*",
+        "walkdir": "*",
+        "request": "*",
+        "underscore": "*",
+        "winston": "*"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-jasmine": "~0.5.1",
+        "grunt-contrib-watch": "~0.5.1",
+        "grunt-exec": "~0.4.2",
+        "grunt-contrib-compass": "~0.5.0",
+        "grunt-contrib-copy": "~0.4.1",
+        "grunt-contrib-jshint": "~0.6.2",
+        "grunt-dust": "~0.5.4",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-template-jasmine-requirejs": "~0.1.5"
+    },
+    "author": "Volkert Paap <hello@paapster.nl>",
+    "contributors": [
+        {
+            "name": "Robert Kievits",
+            "e-mail": "robert.kievits@gmail.com",
+            "url": "http://www.robertkievits.nl"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/paapster/the_frontsite/issues"
+    },
+    "licenses": [
+        {
+            "type": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    ],
+    "copyright": "Paapster 2013"
+}

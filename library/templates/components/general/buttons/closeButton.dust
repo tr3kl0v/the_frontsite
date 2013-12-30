@@ -1,3 +1,0 @@
-{#closeButton}
-	<a aria-hidden="true" class="icon closeButton{#status} {status}{/status}" href="javascript:void(0)">.</a>
-{/closeButton}

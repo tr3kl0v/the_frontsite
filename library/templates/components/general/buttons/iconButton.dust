@@ -1,3 +1,0 @@
-{#iconButton}
-	<a href="#"><span class="{icon}Icon"></span>{label}</a>
-{/iconButton}

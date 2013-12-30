@@ -1,3 +1,0 @@
-{#prevButton}
-	<a class="icon prevButton{#status} {status}{/status}" href="{link}">>{label}</a>
-{/prevButton}
