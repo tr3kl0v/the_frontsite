@@ -1,5 +1,0 @@
-{#textArea}
-	<section class="field">
-		<textarea name="textarea_{id}" id="textarea_{id}"class="textarea{#status} {status}{/status}" {#autofocus}autofocus{/autofocus} {#required}required{/required} {#placeholder}placeholder="{placeholder}"{/placeholder}></textarea>
-	</section>
-{/textArea}

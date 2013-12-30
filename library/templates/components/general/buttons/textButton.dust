@@ -1,3 +1,0 @@
-{#textButton}
-	<a class="textButton{#status} {status}{/status}" href="{link}">{label}</a>
-{/textButton}

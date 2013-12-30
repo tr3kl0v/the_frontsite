@@ -1,3 +1,0 @@
-{#hintText}
-	<p class="hintText">{hintText|s}</p>
-{/hintText}
