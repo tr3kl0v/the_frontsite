@@ -1,0 +1,97 @@
+@mixin gradient3Color($color1, $color2, $color3) {
+  background:$color1;
+  background-image: linear-gradient(bottom, $color1 14%, $color2 45%, $color3 93%);
+  background-image: -o-linear-gradient(bottom, $color1 14%, $color2 45%, $color3 93%);
+  background-image: -moz-linear-gradient(bottom, $color1 14%, $color2 45%, $color3 93%);
+  background-image: -webkit-linear-gradient(bottom, $color1 14%, $color2 45%, $color3 93%);
+  background-image: -ms-linear-gradient(bottom, $color1 14%, $color2 45%, $color3 93%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.14, $color1), color-stop(0.45, $color2), color-stop(0.93, $color3));
+}
+@mixin gradient2Color($color1, $color2) {
+  background:$color1;
+  background-image: linear-gradient(bottom, $color1 33%, $color2 66%);
+  background-image: -o-linear-gradient(bottom, $color1 33%, $color2 66%);
+  background-image: -moz-linear-gradient(bottom, $color1 33%, $color2 66%);
+  background-image: -webkit-linear-gradient(bottom, $color1 33%, $color2 66%);
+  background-image: -ms-linear-gradient(bottom, $color1 33%, $color2 66%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, $color1), color-stop(0.66, $color2));
+}
+@mixin border-box() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin opacity($value) {
+  zoom: 1;
+  opacity:$value;
+  filter:alpha(opacity=($value*100)); /* For IE8 and earlier */
+}
+@mixin transition($property, $time) {
+  -webkit-transition: $property $time;
+  transition: $property $time;
+}
+@mixin formElement($formElementBorderColor:#7F9DB9) {
+  border:$formElementBorderColor solid 1px;
+  margin:0;  
+}
+@mixin borderBox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+} 
+
+
+
+.icon{font-family:'elss'; text-decoration:none;}
+
+/* CLose Button*/
+.icon {
+  &.warning, &.icon-warning {color:#ee0; font-size:12px;}
+  &.icon-closewindow, &.closeButton {background: #fff;color: #000;font-size: 2em;line-height: 1em;margin: 0;padding: 0; text-align: center;height: auto;width: auto;}
+
+}
+
+.twitterIcon{background:url('../images/icons16.png');background-position:-54px 0px;}
+.rssIcon{background:url('../images/icons16.png');background-position:-26px -26px;}
+.resultsIcon{background:url('../images/icons16.png');background-position:-53px -26px;}
+.editIcon{background:url('../images/icons16.png');background-position:-80px -26px;}
+.copyIcon{background:url('../images/icons16.png');background-position:-104px 0px;}
+.setAlertIcon{background:url('../images/icons16.png');background-position:-80px 0px;}
+.renameIcon{background:url('../images/icons16.png');background-position:-80px -26px;}
+.rerunIcon{background:url('../images/icons16.png');background-position:-104px -26px;}
+.sendNowIcon{background:url('../images/icons16.png');background-position:-26px -47px;}
+.exportHistoryIcon{background:url('../images/icons16.png');background-position:-49px -47px;}
+
+.required{color:#f00;}
+
+.pushButton {@include gradient3Color($mainProductColor, lighten($mainProductColor, 3%), lighten($mainProductColor, 10%)); border:#525252 solid 1px; border-radius:3px; color:#fff; font-size:1.4em; padding:3px 12px 4px 12px; text-align:center;
+  &:hover{@include gradient3Color(#525252, lighten(#525252, 3%), lighten(#525252, 10%));}
+}
+
+/*Helper classes*/
+.clrflt{clear:both;}
+.fltrt{float:right;}
+.fltlft{float:left;}
+.hintText{font-size:0.8em;}
+
+input:focus, select:focus, textarea:focus {outline:none;}
+
+
+/*Animations*/
+@-webkit-keyframes menuSlideOpen {
+	from { -webkit-transform: translate(0px); }
+	to { -webkit-transform: translate(250px); }
+}
+@-moz-keyframes menuSlideOpen {
+	from { -moz-transform: translate(0px); }
+	to { -moz-transform: translate(250px); }
+}
+
+@-webkit-keyframes menuSlideClose {
+	from { -webkit-transform: translate(250px); }
+	to { -webkit-transform: translate(0px); }
+}
+@-moz-keyframes menuSlideClose {
+	from { -moz-transform: translate(250px); }
+	to { -moz-transform: translate(0px); }
+}

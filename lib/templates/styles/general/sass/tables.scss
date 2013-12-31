@@ -1,0 +1,62 @@
+/*   Default - Forms Elements
+---------------------------------------------- */
+.table {
+	h2 {color:#000; font-size:2.2em; font-weight:200; letter-spacing:0; line-height:1.1em; margin:2px 0 5px 0;}
+	h3, h4 {color:$mainProductColor;font-size:1.3em;}
+	a.disabled{@include opacity(0.4);cursor:text;text-decoration:none;}
+	.toolbar{background:url('#{$assetPath}/bg-resultHeader.png');border:#838f99 solid 1px;clear:both;height:25px;padding:3px 3px 0;width:100%;@include border-box;
+		.checkboxContainer{float:left;
+			input.disabled{@include opacity(0.4);cursor:text;}
+		}
+		.textButton{color:#000;float:right;margin:3px 15px;}
+		.operators{float:left; overflow:auto;
+			li{float: left; padding:1px 3px 0px 5px;
+				a{border-right:1px solid #666;color:#000;padding:0 4px 0 0;}
+				&.last{
+					a{border-right:none;}
+				}
+			}
+		}
+		.combineResults{float:left;padding:0px 10px 0px 3px;border-right:1px solid #838f99;
+			.pushButton{background:#c2c2c2;border:#838f99 solid 1px;color:#000;float:left; font-size:1em; margin:0 3px; min-width:0px; padding: 0 3px;text-decoration:none;@include opacity(0.8);}
+			.field{float:left;margin:0 3px;
+				input{font-size:0.9em;}
+			}
+			.radioButton{float:left;margin:0 3px;
+				label{vertical-align:top; line-height:18px;}
+			}
+			span{float:left;margin:1px 3px;}
+			.operators{float:left;margin-left:15px;
+				.textButton{color:#000;float:left;margin:2px 0;padding:0 3px;
+					&:last-child{border-left:1px solid #838f99;}
+				}
+			}
+		}
+		.showingResults{float:right;padding:4px 3px 3px 5px;
+			.prevButton, .nextButton{background:#e6f4fd;border:#838f99 solid 1px;padding:2px;}
+			span{margin:0 4px;}
+		}
+	}
+	.subbar{background:#fffed9;border:#838f99 solid 1px;overflow:auto;padding:1px 3px;width:100%;@include border-box;
+		.checkboxContainer{float:left;width:3%;
+			input{width:100%;
+				&.disabled{@include opacity(0.4);cursor:text;text-decoration:none;}
+			}
+		}
+		.sortOperators{float: right;text-align: right;width: 95%;
+			a{color:#000;font-size:1.1em;font-weight:700;margin:3px 10px;text-decoration:none;
+				&:hover{text-decoration:underline;}
+			}
+		}
+	}
+	.tableList{
+		.noResults {
+			.warning {margin-right: 10px; text-shadow:1px 1px 1px #333;}
+		}
+		div{position:relative;padding:3px;
+			&.even{background:#fff;}
+			&.uneven{background:#f9f9f9;}
+			&.even, &.uneven{border:1px #ddd solid;border-bottom:none;}
+		}
+	}
+}

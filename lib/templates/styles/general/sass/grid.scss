@@ -1,0 +1,97 @@
+
+/*   Grid
+---------------------------------------------- */
+html {height:100%;width:100%;}
+	body {background:$bodyBackgroundColor; font-family:$generalFont; font-size:$generalFontSize; height:100%; line-height:$generalLineHeight; letter-spacing:$generalFontLetterSpacing; margin:0; padding:41px 0 0; text-align:left; width:$bodyWidth;}
+		
+		/*   Dialogs
+		---------------------------------------------- */
+		#overlay {background:#000; display:none; height:100%; @include opacity(0.6); left:0; position:fixed; top:0; width:100%; z-index:2000;}
+		#pop-ups {display:none; overflow:auto; margin:0 30%; position:fixed; top:50px; width:40%; z-index:3000;}
+		
+		/*   Wrapper
+		---------------------------------------------- */
+		#wrapper {background-color:$mainWrapperBackgroundColor; min-height:425px;
+			&:after {content:""; display:table; clear:both;}
+
+		}			
+
+
+			/*   Main
+			---------------------------------------------- */
+			#mainWrapper {font-size:1em; margin:0 auto; max-width:984px;
+				&.fullPage {margin:0; max-width:100%; padding:0;} 
+			}
+
+				.contentWrapper {
+					&:after {content:""; display:table; clear:both;}
+				}
+					
+					.columns {float:left; width:100%;
+						.col {@include box-sizing(border-box); float:left; padding:0 10px;}
+					}	
+						
+					.oneCol {
+						.col {width:100%;}
+					}
+					
+					.twoCol {
+						.col {width:50%;}
+						.oneThird {width:33%;}
+						.twoThird {width:67%;}
+						.oneQuarter {width:25%; padding:0; position: relative;}
+						.threeQuarter {width:75%; padding:0; position: relative;}
+						.oneFifth{width:20%; padding:0; position: relative;}
+						.fourFifth{width:80%; padding:0; position: relative;}
+					}
+
+					.twoCol .col2 {@include box-sizing(border-box); float:right; width:50%;
+
+					}
+
+					.threeCol .col1 {@include box-sizing(border-box); float:left; padding-right:26px; width:406px;
+
+					}
+
+					.threeCol .col2 {@include box-sizing(border-box); float:left; padding:0 13px; width:406px;
+
+					}
+
+					.threeCol .col3 {@include box-sizing(border-box); float:right; padding-left:26px; width:406px;
+
+					}
+
+
+
+				/*
+				.leftCol {float:left; min-height:1px;}
+				.midCol {@include box-sizing(border-box); float:left; min-height:1px;}
+				.rightCol {@include box-sizing(border-box); float:left; min-height:1px;}
+				
+				#rowTwo, #rowThree, #rowFour {}
+				.twoCol {width:100%;overflow:auto;
+					.leftCol {padding-right:10px; width:50%;}
+					.rightCol {padding-left:10px; width:50%;}
+					.twoThird {width:67%;}
+					.oneThird {width:33%;}
+				}
+				.threeCol{width:100%;overflow:auto;
+					.leftCol{width:33%;}
+					.midCol{width:34%;}
+					.rightCol{width:33%;}
+				}
+				.midCol {float:left;}
+				*/
+
+
+
+
+			/*   Tablet Rules
+			---------------------------------------------- */
+			@media all and (max-width: $tabletBreak) {background-color:$contentBackground;
+				#mainWrapper {overflow:auto;padding-left:1%;padding-right:1%;
+					.twoCol {width:100%;overflow:auto;
+					}
+				}
+			}
+

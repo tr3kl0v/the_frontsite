@@ -1,0 +1,141 @@
+@font-face {
+	font-family: 'elss';
+	src:url('/library/static/fonts/icons/elss.eot');
+	src:url('/library/static/fonts/icons/elss.eot?#iefix') format('embedded-opentype'),
+		url('/library/static/fonts/icons/elss.woff') format('woff'),
+		url('/library/static/fonts/icons/elss.ttf') format('truetype'),
+		url('/library/static/fonts/icons/elss.svg#elss') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'elss';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-elss, .icon-elss-icon, .icon-clipboard, .icon-warning, .icon-info, .icon-success, .icon-stats, .icon-star, .icon-settings, .icon-search, .icon-locked, .icon-livechat, .icon-home, .icon-error, .icon-closewindow, .icon-avatar, .icon-alarm, .icon-database, .icon-delete, .icon-download, .icon-library, .icon-menu, .icon-opennewwindow, .icon-upload, .icon-expand, .icon-contract, .icon-tree-expand, .icon-tree-collapse, .icon-circle-arrow-right, .icon-circle-arrow-left, .icon-arrow-up, .icon-arrow-right, .icon-arrow-left, .icon-arrow-down {
+	font-family: 'elss';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-elss:before {
+	content: "\21";
+}
+.icon-elss-icon:before {
+	content: "\22";
+}
+.icon-clipboard:before {
+	content: "\23";
+}
+.icon-warning:before {
+	content: "\24";
+}
+.icon-info:before {
+	content: "\25";
+}
+.icon-success:before {
+	content: "\26";
+}
+.icon-stats:before {
+	content: "\27";
+}
+.icon-star:before {
+	content: "\28";
+}
+.icon-settings:before {
+	content: "\29";
+}
+.icon-search:before {
+	content: "\2a";
+}
+.icon-locked:before {
+	content: "\2b";
+}
+.icon-livechat:before {
+	content: "\2c";
+}
+.icon-home:before {
+	content: "\2d";
+}
+.icon-error:before {
+	content: "\2e";
+}
+.icon-closewindow:before {
+	content: "\2f";
+}
+.icon-avatar:before {
+	content: "\30";
+}
+.icon-alarm:before {
+	content: "\31";
+}
+.icon-database:before {
+	content: "\32";
+}
+.icon-delete:before {
+	content: "\33";
+}
+.icon-download:before {
+	content: "\34";
+}
+.icon-library:before {
+	content: "\35";
+}
+.icon-menu:before {
+	content: "\36";
+}
+.icon-opennewwindow:before {
+	content: "\37";
+}
+.icon-upload:before {
+	content: "\38";
+}
+.icon-expand:before {
+	content: "\39";
+}
+.icon-contract:before {
+	content: "\3a";
+}
+.icon-tree-expand:before {
+	content: "\3b";
+}
+.icon-tree-collapse:before {
+	content: "\3c";
+}
+.icon-circle-arrow-right:before {
+	content: "\3d";
+}
+.icon-circle-arrow-left:before {
+	content: "\3e";
+}
+.icon-arrow-up:before {
+	content: "\3f";
+}
+.icon-arrow-right:before {
+	content: "\40";
+}
+.icon-arrow-left:before {
+	content: "\41";
+}
+.icon-arrow-down:before {
+	content: "\42";
+}

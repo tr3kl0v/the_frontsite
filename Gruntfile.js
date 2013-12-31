@@ -142,10 +142,10 @@ module.exports = function(grunt) {
 		compass: {
 			website1: {
 				options: {   
-					basePath: '../website1/static/',
+					basePath: 'lib/styles/website1',
 					sassDir: 'sass',
-					cssDir: 'css',
-					fontsDir: '../website1/static/fonts',
+					cssDir: 'public/css',
+					fontsDir: 'public/static/fonts',
 					environment: 'development'
 				}
 			}

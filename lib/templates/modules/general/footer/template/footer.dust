@@ -1,0 +1,26 @@
+<!-- Footer -->
+<div id="footerWrapper">
+	<footer id="pageFooter">
+		<nav id="footerNav">
+			{#navLists}
+			<div {#status}class="{status}"{/status}> 
+				<h2>{listTitle}</h2>
+				<ul>
+					{#links}
+						<li><a {#status}class="{status}"{/status} href="{href}" {#title}title="{title}"{/title}>{label|s}</a></li>
+					{/links}
+				</ul>
+			</div>
+			{/navLists}
+		</nav>
+
+		{#disclaimer}
+			<section class="disclaimer">
+				<img alt="Elsevier logo" src="static/images/logo-elsevier.png" />
+				<p><strong>{textCopy|s}</strong></p>
+				<p>{textLicense|s}</p>
+			</section>
+		{/disclaimer}
+	</footer>
+</div>
+<!--// Footer -->

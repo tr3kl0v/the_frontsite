@@ -1,0 +1,41 @@
+/*   Footer
+---------------------------------------------- */
+footer {background-color:#f3f3f3; font-size:1.2em; padding-top:31px; width:100%;
+	a {color:#333; font-family:'Open Sans', Arial, sans-serif; text-decoration:none; 
+		&:hover {color:$mainProductColor;}
+	}
+
+	/*   Navigation
+	---------------------------------------------- */
+	nav#footerNav {margin:0 auto; max-width:980px; 
+		div {float:left; padding:0 32px 29px 0; width:220px;
+			h2 {color:#333; font-weight:400; padding-bottom:12px; text-transform:uppercase;}
+			ul {list-style-type:none; margin:0; padding:0;
+				li {line-height:1.55em; padding-bottom:1px;}
+			}
+			&:last-child {padding-right:0;}
+		}
+		&:after {clear:both; content:"."; display:block; height:0; visibility:hidden;}
+
+		/*   Tablet rules
+		---------------------------------------------- */
+		@media screen and (max-width: $tabletBreak) { display:none; }
+	}
+	
+	.disclaimer {margin:0 auto; font-size:0.9em; line-height:1.6em; max-width:980px; padding-bottom:27px;
+		img {float:left; height:35px; margin-right:10px; width:35px;}
+		p {
+			strong {font-weight:600;}
+		}
+		ul {list-style-type:none; margin:0; padding:0; 
+			li {display:inline;}
+		}
+		&:after {clear:both; content:"."; display:block; height:0; visibility:hidden;}
+
+		/*   Tablet rules
+		---------------------------------------------- */
+		@media screen and (max-width: $tabletBreak) { line-height:1.5em;padding:1% 2% 0;
+		    img {display:none;}
+		}
+	}
+}

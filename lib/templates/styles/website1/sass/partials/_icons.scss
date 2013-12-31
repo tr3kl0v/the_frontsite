@@ -1,0 +1,7 @@
+$sprite-sprite-base-class: '.sprite';
+$sprite-layout: smart;
+$sprite-sprite-dimensions: true;
+ 
+@import "compass/utilities/sprites/base";
+@import "icons/*.png";
+@include all-icons-sprites;

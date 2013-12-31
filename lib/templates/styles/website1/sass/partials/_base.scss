@@ -1,0 +1,62 @@
+@import "compass/reset/utilities";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/support";
+
+
+/*   Eric Meyer 2.0 reset
+---------------------------------------------- */
+@include global-reset;
+
+
+/*   Product Indentifiers
+---------------------------------------------- */
+$productKey:"website1";
+$assetPath:"../images";
+$tabletBreak: 980px;
+$phoneBreak: 480px;
+
+
+/*   Product Specific Declarations
+---------------------------------------------- */
+$generalFont:'Open Sans', Arial, sans-serif;
+$logoFont:'Titillium', Arial, sans-serif;
+$generalFontSize:62.5%;
+$generalFontLetterSpacing:0.01em;
+$generalLineHeight:1.5em;
+
+$bodyWidth:100%;
+$bodyBackgroundColor:#f2f2f2;
+
+$mainProductColor:#444;
+$contentBackground:#fff;
+$mainWrapperBackgroundColor:#fbfbfb;
+$formElementBorderColor:#7F9DB9;
+
+$buttonBackgroundColor:#444;
+$buttonFontColor:#000;
+$buttonBorderColor:#7B797B;
+
+$popupbackground:#fff;
+
+$messagebackground:#ffffe0;
+$formbackground:#FFFBCB;
+
+
+	/*   Header
+	---------------------------------------------- */
+	$productLogo:url("#{$assetPath}/logo-product.png");
+	$elssLogo:url("#{$assetPath}/family-logo.png");
+
+
+		/*   Navigation
+		---------------------------------------------- */
+		$mainNavBackgroundColor:#444;
+		$mainNavBackgroundLoginColor:#525252;
+
+
+//News Block
+$newsBackground:#FAF7FA;
+
+//Emtree
+$emtreeDescriptioncolor:#003360;

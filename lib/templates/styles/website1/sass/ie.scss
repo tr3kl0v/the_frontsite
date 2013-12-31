@@ -1,0 +1,11 @@
+html {
+	body {
+		#footerWrapper{
+			footer{
+				nav#footerNav{
+					div.last-child{padding-right:0;}
+				}
+			}
+		}
+	}
+}

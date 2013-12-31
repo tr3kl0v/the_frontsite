@@ -1,0 +1,29 @@
+/*   Default - Forms Elements
+---------------------------------------------- */
+.formWrapper {
+	h2 {color:$mainProductColor; font-size:2em; font-weight:400; letter-spacing:0; line-height:1.1em; margin:15px 0 23px 0;}
+	h3 {font-size:1.3em; margin:12px 0 5px;}
+	p {font-weight:200; margin-bottom:15px;
+		&.description {font-size:1.4em; line-height:1.85em; margin:0 10px 16px 0;}
+		strong {font-weight:400;}
+	}
+	form {background-color:#f3f3f3; border:#cdcdcd solid 1px; padding:24px 24px 11px 24px;
+		.searchField{position:relative;}
+		fieldset {
+
+		}
+		&:after {clear:both; content:"."; display:block; height:0; visibility:hidden;}
+
+	}
+	label {font-size:1.2em; display:inline-block; line-height:1.55em; margin:0 10px 0 0; }
+	input[type="text"] {background-color:#fff; border:#bababa solid 1px; box-sizing:border-box; font:200 1.3em $generalFont; margin-bottom:13px; padding:4px 8px; width:100%;}
+	input[type="password"] {background-color:#fff; border:#bababa solid 1px; box-sizing:border-box; font:200 1.3em $generalFont; margin-bottom:13px; padding:4px 8px; width:100%;}
+	input[type="checkbox"] {background-color:#fff; border:#bababa solid 1px; box-sizing:border-box; font:200 1.3em $generalFont; margin:0 10px 10px 0; padding:4px 8px;}
+	input[type="submit"] {background-color:#525252; border:#525252 solid 1px; border-radius:3px; color:#fff; cursor:pointer; font:1.3em $generalFont; padding:3px 12px 4px 12px; margin:0 14px 13px 0; min-width:90px;}
+	select {background-color:#fff; border:#bababa solid 1px; font:1.3em $generalFont; padding:4px 8px;}
+
+	textarea {background-color:#fff; border:#bababa solid 1px; box-sizing:border-box; font:200 1.3em $generalFont; margin:0 10px 10px 0; padding:4px 8px;}
+	input.productStyle {background-color:$buttonBackgroundColor; border-color:$buttonBackgroundColor;}
+	.hintText {display:none;}
+
+}

@@ -22,8 +22,10 @@ if (args == "all"){
 			}
 		}
 	})
-} else if (args == 'tests') {
+}
+else if (args == 'tests') {
 	require('./tests/app');
-} else {
+}
+else {
 	var product = require('../' + args + '/server/app');
 }

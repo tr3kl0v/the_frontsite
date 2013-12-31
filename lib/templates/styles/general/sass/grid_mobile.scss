@@ -1,0 +1,35 @@
+
+/*   TouchDevice Grid
+---------------------------------------------- */
+html {font-family:$generalFont; font-size:$generalFontSize; line-height:$generalLineHeight; width:100%; 
+    #overlay {background:#000; display:none; height:100%; width:100%; @include opacity(0.6); position:absolute;  z-index:2000;}
+
+    &.open {
+        body {overflow-x:hidden; 
+            -webkit-animation: menuSlideOpen 0.3s ease; 
+            animation: menuSlideOpen 0.3s ease; 
+
+            -webkit-animation-fill-mode: forwards; 
+            animation-fill-mode: forwards; 
+        }
+    }
+    &.close {
+        body {
+            -webkit-animation: menuSlideClose 0.3s ease; 
+            animation: menuSlideClose 0.3s ease; 
+
+            -webkit-animation-fill-mode: forwards; 
+            animation-fill-mode: forwards; 
+        }
+    }
+    body {background:$bodyBackgroundColor; height:100%; position:absolute; width:$bodyWidth;
+        #wrapper {background:$contentBackground;
+            #mainWrapper {overflow:auto; background-color:$mainWrapperBackgroundColor; padding:1% 1% 60px 1%;
+                h2 {@include gradient3Color($mainProductColor, lighten($mainProductColor, 3%), lighten($mainProductColor, 6%)); color:#fff; font-size:1.5em; line-height:30px; margin:0; border-radius:10px 10px 0 0; box-shadow: 0px 2px 5px #999; text-align:center}
+                .leftCol {float:none; width:100%;}
+                .midCol {float:none; width:100%;}
+                .rightCol {float:none; width:100%;}
+            }
+        }
+    }
+}

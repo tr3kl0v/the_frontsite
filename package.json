@@ -1,8 +1,8 @@
 {
     "name": "The_FrontSide",
     "version": "0.6.2",
-    "release": "Backside Rodeo 180",
-    "description": "An express-based Node.js web application asynchrone dust render engine which can run on server and client.",
+    "release": "Backside Rodeo 180.2",
+    "description": "An express-based Node.js web application asynchrone dustjs render engine which can run on server and client.",
     "main": "server.js",
     "scripts": {
         "test": "grunt test"
