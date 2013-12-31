@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/paapster/the_frontsite.png?branch=master)](https://travis-ci.org/paapster/the_frontsite)
+
+
 [The FrontSite](http://paapster.nl/) - Running FE in browser or on the server
 ==================================================
 =============
