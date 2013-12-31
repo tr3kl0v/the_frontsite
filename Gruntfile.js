@@ -8,7 +8,10 @@ module.exports = function(grunt) {
 		"build": "build",
 		"dist_www": "./public",
 		"bower_soure": "./bower_components",
-		"dist_bower": "./public/static/js/vendor"
+		"dist_bower": "./public/static/js/vendor",
+		"lib_dir": "./lib/templates",
+		"utils_folder": "./utils",
+		"log_folder": "./logs"
 	};
 
 
@@ -18,6 +21,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		cvars: configVars,
 		
+		// Bower setup
 		bower: {
 			setup: {
 				options: {
@@ -27,8 +31,9 @@ module.exports = function(grunt) {
 			}
 		},
 
-	   copy: {
-			 "dist-bower" : {
+		// Copy of files
+		copy: {
+			"dist-bower" : {
 				files: [
 					{
 						src: '<%= cvars.bower_soure %>/jquery/jquery.min.map',
@@ -70,29 +75,30 @@ module.exports = function(grunt) {
 			}
 		},
 		
+		// Watch to precompile
 		watch: {
 			scss: {
-				files: ['lib/templates/modules/**/*.scss', 'lib/templates/submodules/**/*.scss'],
+				files: ['<%= cvars.lib_dir %>/modules/**/*.scss', '<%= cvars.lib_dir %>/submodules/**/*.scss'],
 				tasks: 'compass'
 			},
 			website1scss: {
-				files: ['lib/templates/styles/website1/**/*.scss'],
+				files: ['<%= cvars.lib_dir %>/styles/website1/**/*.scss'],
 				tasks: 'compass:website1'
 			},
 			modules: {
-				files: ['lib/templates/modules/**/*.dust', 'lib/templates/modules/**/*.js'],
+				files: ['<%= cvars.lib_dir %>/modules/**/*.dust', '<%= cvars.lib_dir %>/modules/**/*.js'],
 				tasks: ['exec:modules','jshint:modules']
 			},
 			submodules: {
-				files: ['lib/templates/submodules/**/*.dust', 'lib/templates/submodules/**/*.js'],
+				files: ['<%= cvars.lib_dir %>/submodules/**/*.dust', '<%= cvars.lib_dir %>/submodules/**/*.js'],
 				tasks: ['exec:submodules', 'jshint:submodules']
 			},
 			components: {
-				files: ['lib/templates/components/**/*.dust', 'lib/templates/components/**/*.js'],
+				files: ['<%= cvars.lib_dir %>/components/**/*.dust', '<%= cvars.lib_dir %>/components/**/*.js'],
 				tasks: ['exec:components']
 			},
 			pages: {
-				files: ['lib/templates/pages/**/*.dust'],
+				files: ['<%= cvars.lib_dir %>/pages/**/*.dust'],
 				tasks: ['exec:pages']
 			},
 			utilities: {
@@ -102,54 +108,70 @@ module.exports = function(grunt) {
 		},
 
 
-//		jasmine : {
-//			website1: {
-//				src : ['/static/js/frontside.js', '/templates/modules/website1/**/*.js'],
-//				options: {
-//					specs: ['specs/general/*.spec.js', 'specs/website1/*.spec.js'],
-//					host: 'http://127.0.0.1:8000/',
-//					template: require('grunt-template-jasmine-requirejs'),
-//					templateOptions: {
-//						requireConfigFile:'specs/scripts.js'
-//					}
-//				}
-//			}
-//		},
+		// Testing
+		jasmine : {
+			website1: {
+				src : ['/public/static/js/frontside.js', '/lib/templates/modules/website1/**/*.js'],
+				options: {
+					specs: ['/test/general/*.spec.js', '/test/website1/*.spec.js'],
+					host: 'http://127.0.0.1:8000/',
+					template: require('grunt-template-jasmine-requirejs'),
+					templateOptions: {
+						requireConfigFile:'test/scripts.js'
+					}
+				}
+			}
+		},
+
+
+		// JS Lint validation
 		jshint: {
-			all: ['lib/templates/modules/**/*.js', 'lib/templates/submodules/**/*.js', 'public/static/js/extend.js', 'public/static/js/render.js'],
-			modules: ['lib/templates/modules/**/*.js'],
-			submodules: ['lib/templates/submodules/**/*.js'],
+			all: ['<%= cvars.lib_dir %>/modules/**/*.js', '<%= cvars.lib_dir %>/submodules/**/*.js', 'public/static/js/extend.js', 'public/static/js/render.js'],
+			modules: ['<%= cvars.lib_dir %>/modules/**/*.js'],
+			submodules: ['<%= cvars.lib_dir %>/submodules/**/*.js'],
 			utils: ['public/static/js/*.js']
 		},
+
+		// Execute commands
 		exec: {
 			modules: {
+				cwd: "<%= cvars.utils_folder %>",
 				command: 'node precompile modules',
-				stdout: true
+				stdout: true,
 			},
 			submodules: {
+				cwd: "<%= cvars.utils_folder %>",
 				command: 'node precompile subs',
 				stdout: true
 			},
 			components: {
+				cwd: "<%= cvars.utils_folder %>",
 				command: 'node precompile components',
 				stdout: true
 			},
 			pages: {
+				cwd: "<%= cvars.utils_folder %>",
 				command: 'node precompile pages',
 				stdout: true
+			},
+			remove_logs: {
+				cwd: "<%= cvars.logs_folder %>",
+				command: 'rm -rf *.log'
 			}
 		},
+
+		// Compass watch
 		compass: {
 			website1: {
 				options: {   
-					basePath: 'lib/templates/styles/website1',
+					basePath: '<%= cvars.lib_dir %>/styles/website1',
 					sassDir: 'sass',
 					cssDir: '../../../../public/static/css',
 					fontsDir: 'public/static/fonts',
 					environment: 'development'
 				}
 			}
-		}
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-bower-task');
@@ -162,16 +184,17 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	//grunt.registerTask('test', ['jasmine']);
-	
 	
 	// Default task(s).
-	grunt.registerTask('default', ['watch', 'compass', 'jshint', 'dust', 'exec', 'concat']);
+	grunt.registerTask('default', ['exec:remove_logs', 'watch', 'compass', 'jshint', 'dust', 'exec', 'concat']);
 
-	/* BASIC TASKS */
-	grunt.registerTask('setup', ['bower:setup']);
+	// Grunt testing
+	grunt.registerTask('test', ['jasmine']);
 
-	/* Update bower repository -- must run build manually before this */
+	// BASIC TASKS
+	grunt.registerTask('setup', ['bower:setup', 'exec:remove_logs']);
+
+	// Update bower repository -- must run build manually before this
 	grunt.registerTask('dist-bower', ['copy:dist-bower']);
 
 };

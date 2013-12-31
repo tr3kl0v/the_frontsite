@@ -9,10 +9,12 @@
 *.pid
 *.gz
 .build
-.project
-.settings
 .DS_Store
+.grunt
+.project
 .sass-cache
+.settings
+_SpecRunner.*
 
 npm-debug.log
 node_modules
