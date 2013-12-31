@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 				tasks: 'compass'
 			},
 			website1scss: {
-				files: ['../website1/static/**/*.scss'],
+				files: ['lib/templates/styles/website1/**/*.scss'],
 				tasks: 'compass:website1'
 			},
 			modules: {
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 				tasks: ['exec:pages']
 			},
 			utilities: {
-				files: ['static/js/*.js'],
+				files: ['public/static/js/*.js'],
 				tasks: ['jshint:utils']
 			}
 		},
@@ -116,10 +116,10 @@ module.exports = function(grunt) {
 //			}
 //		},
 		jshint: {
-			all: ['lib/templates/modules/**/*.js', 'lib/templates/submodules/**/*.js', 'static/js/extend.js', 'static/js/render.js'],
+			all: ['lib/templates/modules/**/*.js', 'lib/templates/submodules/**/*.js', 'public/static/js/extend.js', 'public/static/js/render.js'],
 			modules: ['lib/templates/modules/**/*.js'],
 			submodules: ['lib/templates/submodules/**/*.js'],
-			utils: ['static/js/*.js']
+			utils: ['public/static/js/*.js']
 		},
 		exec: {
 			modules: {
@@ -142,9 +142,9 @@ module.exports = function(grunt) {
 		compass: {
 			website1: {
 				options: {   
-					basePath: 'lib/styles/website1',
+					basePath: 'lib/templates/styles/website1',
 					sassDir: 'sass',
-					cssDir: 'public/css',
+					cssDir: '../../../../public/static/css',
 					fontsDir: 'public/static/fonts',
 					environment: 'development'
 				}
