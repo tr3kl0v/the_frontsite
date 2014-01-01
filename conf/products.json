@@ -4,7 +4,7 @@
             "port": 8000,
             "i18n": {
                 "fallback": "en-US",
-                "contentPath": "./locales"
+                "contentPath": "./l18n"
             },
             "errorPages": {
                 "404": "errors/404",
