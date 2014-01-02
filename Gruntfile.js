@@ -10,15 +10,15 @@ module.exports = function(grunt) {
 		"bower_soure": "./bower_components",
 		"dist_bower": "./public/static/js/vendor",
 		"lib_dir": "./lib/templates",
-		"utils_folder": "./utils",
-		"log_folder": "./logs"
+		"utils_folder": "./utils/compile-dustjs",
+		"log_folder": "./logs/"
 	};
 
 
 	// Project configuration.
 	grunt.initConfig({
 
-		pkg: grunt.file.readJSON('package.json'),
+		pkg: grunt.file.readJSON('package.json', 'bower.json'),
 		cvars: configVars,
 		
 		// Bower setup
@@ -136,27 +136,27 @@ module.exports = function(grunt) {
 		exec: {
 			modules: {
 				cwd: "<%= cvars.utils_folder %>",
-				command: 'node precompile modules',
+				command: 'node compile modules',
 				stdout: true,
 			},
 			submodules: {
 				cwd: "<%= cvars.utils_folder %>",
-				command: 'node precompile subs',
+				command: 'node compile subs',
 				stdout: true
 			},
 			components: {
 				cwd: "<%= cvars.utils_folder %>",
-				command: 'node precompile components',
+				command: 'node compile components',
 				stdout: true
 			},
 			pages: {
 				cwd: "<%= cvars.utils_folder %>",
-				command: 'node precompile pages',
+				command: 'node compile pages',
 				stdout: true
 			},
 			remove_logs: {
 				cwd: "<%= cvars.logs_folder %>",
-				command: 'rm -rf *.log'
+				command: 'rm -rf *.log',
 			}
 		},
 
@@ -174,6 +174,7 @@ module.exports = function(grunt) {
 		},
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -183,7 +184,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-template-jasmine-requirejs');
 
 	
 	// Default task(s).

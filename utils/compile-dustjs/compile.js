@@ -3,13 +3,13 @@ var scriptToRun = process.argv[process.argv.length - 1],
 
 
 if (scriptToRun === 'modules'){
-	require(path.join(__dirname, '../', 'node_modules', 'compile-dust', 'bin', 'compileModules.js'));
+	require(path.join(__dirname, 'compile-dustjs', 'bin', 'compileModules.js'));
 }
 else if (scriptToRun === 'components') {
 	require(path.join(__dirname, '../', 'node_modules', 'compile-dust', 'bin', 'compileComponents.js'));
 }
 else if (scriptToRun === 'pages') {
-	require(path.join(__dirname, '../', 'node_modules', 'compile-dust', 'bin', 'compilePages.js'));
+	require(path.join(__dirname, 'pages.js'));
 }
 else if (scriptToRun === 'subs') {
 	require(path.join(__dirname, '../', 'node_modules', 'compile-dust', 'bin', 'compileSubModules.js'));
