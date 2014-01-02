@@ -1,4 +1,4 @@
-@font-face{font-family:'elss';src:url("/library/static/fonts/icons/elss.eot");src:url("/library/static/fonts/icons/elss.eot?#iefix") format("embedded-opentype"),url("/library/static/fonts/icons/elss.woff") format("woff"),url("/library/static/fonts/icons/elss.ttf") format("truetype"),url("/library/static/fonts/icons/elss.svg#elss") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:'elss';src:url("/static/fonts/icons/elss.eot");src:url("/static/fonts/icons/elss.eot?#iefix") format("embedded-opentype"),url("/static/fonts/icons/elss.woff") format("woff"),url("/static/fonts/icons/elss.ttf") format("truetype"),url("/static/fonts/icons/elss.svg#elss") format("svg");font-weight:normal;font-style:normal}
 [data-icon]:before{font-family:'elss';content:attr(data-icon);speak:none;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased}
 .icon-elss,.icon-elss-icon,.icon-clipboard,.icon-warning,.icon-info,.icon-success,.icon-stats,.icon-star,.icon-settings,.icon-search,.icon-locked,.icon-livechat,.icon-home,.icon-error,.icon-closewindow,.icon-avatar,.icon-alarm,.icon-database,.icon-download,.icon-library,.icon-menu,.icon-opennewwindow,.icon-upload,.icon-expand,.icon-contract,.icon-tree-expand,.icon-tree-collapse,.icon-circle-arrow-right,.icon-circle-arrow-left,.icon-arrow-up,.icon-arrow-right,.icon-arrow-left,.icon-arrow-down,.icon-female,.icon-male{font-family:'elss';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased}
 .icon-elss:before{content:"\21"}
@@ -44,39 +44,39 @@
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 300;
-	src: url(/library/static/fonts/OpenSans/OpenSans-Light-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-Light-webfont.eot);
 	src: local('Open Sans Light'),
 		local('OpenSans-Light'),
-		url(/library/static/fonts/OpenSans/OpenSans-Light-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-Light-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-Light-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-Light-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-Light-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-Light-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-Light-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-Light-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 300;
-	src: url(/library/static/fonts/OpenSans/OpenSans-LightItalic-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-LightItalic-webfont.eot);
 	src: local('OOpen Sans Light Italic'),
 		local('OOpenSansLight-Italic'),
-		url(/library/static/fonts/OpenSans/OpenSans-LightItalic-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-LightItalic-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-LightItalic-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-LightItalic-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-LightItalic-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-LightItalic-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-LightItalic-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-LightItalic-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
-	src: url(/library/static/fonts/OpenSans/OpenSans-Regular-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-Regular-webfont.eot);
 	src: local('Open Sans'),
 		local('OpenSans'),
-		url(/library/static/fonts/OpenSans/OpenSans-Regular-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-Regular-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-Regular-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-Regular-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-Regular-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-Regular-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-Regular-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-Regular-webfont.svg) format('svg');
 
 }
 
@@ -84,13 +84,13 @@
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 400;
-	src: url(/library/static/fonts/OpenSans/OpenSans-Italic-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-Italic-webfont.eot);
 	src: local('Open Sans Italic'),
 		local('OpenSans-Italic'),
-		url(/library/static/fonts/OpenSans/OpenSans-Italic-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-Italic-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-Italic-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-Italic-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-Italic-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-Italic-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-Italic-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-Italic-webfont.svg) format('svg');
 
 }
 
@@ -98,78 +98,78 @@
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 600;
-	src: url(/library/static/fonts/OpenSans/OpenSans-Semibold-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-Semibold-webfont.eot);
 	src: local('Open Sans Semibold'),
 		local('OpenSans-Semibold'),
-		url(/library/static/fonts/OpenSans/OpenSans-Semibold-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-Semibold-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-Semibold-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-Semibold-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-Semibold-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-Semibold-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-Semibold-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-Semibold-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 600;
-	src: url(/library/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.eot);
 	src: local('pen Sans Semibold Italic'),
 		local('OpenSans-SemiboldItalic'),
-		url(/library/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 700;
-	src: url(/library/static/fonts/OpenSans/OpenSans-Bold-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-Bold-webfont.eot);
 	src: local('Open Sans Bold'),
 		local('OpenSans-Bold'),
-		url(/library/static/fonts/OpenSans/OpenSans-Bold-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-Bold-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-Bold-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-Bold-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-Bold-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-Bold-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-Bold-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-Bold-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 700;
-	src: url(/library/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.eot);
+	src: url(/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.eot);
 	src: local('Open Sans Bold Italic'),
 		local('OpenSans-BoldItalic'),
-		url(/library/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.woff) format('woff'),
-		url(/library/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.svg) format('svg');
+		url(/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.woff) format('woff'),
+		url(/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.ttf) format('ttf'),
+		url(/static/fonts/OpenSans/OpenSans-BoldItalic-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Titillium';
 	font-style: normal;
 	font-weight: 200;
-	src: url(/library/static/fonts/TitilliumText/TitilliumText25L004-webfont.eot);
+	src: url(/static/fonts/TitilliumText/TitilliumText25L004-webfont.eot);
 	src: local('Titillium Text Thin'),
 		local('TitilliumText25L004'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L004-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L004-webfont.woff) format('woff'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L004-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L004-webfont.svg) format('svg');
+		url(/static/fonts/TitilliumText/TitilliumText25L004-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/TitilliumText/TitilliumText25L004-webfont.woff) format('woff'),
+		url(/static/fonts/TitilliumText/TitilliumText25L004-webfont.ttf) format('ttf'),
+		url(/static/fonts/TitilliumText/TitilliumText25L004-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Titillium';
 	font-style: normal;
 	font-weight: 400;
-	src: url(/library/static/fonts/TitilliumText/TitilliumText25L003-webfont.eot);
+	src: url(/static/fonts/TitilliumText/TitilliumText25L003-webfont.eot);
 	src: local('Titillium Text'),
 		local('TitilliumText'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L003-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L003-webfont.woff) format('woff'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L003-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L003-webfont.svg) format('svg');
+		url(/static/fonts/TitilliumText/TitilliumText25L003-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/TitilliumText/TitilliumText25L003-webfont.woff) format('woff'),
+		url(/static/fonts/TitilliumText/TitilliumText25L003-webfont.ttf) format('ttf'),
+		url(/static/fonts/TitilliumText/TitilliumText25L003-webfont.svg) format('svg');
 
 }
 
@@ -177,24 +177,24 @@
 	font-family: 'Titillium';
 	font-style: normal;
 	font-weight: 600;
-	src: url(/library/static/fonts/TitilliumText/TitilliumText25L002-webfont.eot);
+	src: url(/static/fonts/TitilliumText/TitilliumText25L002-webfont.eot);
 	src: local('Titillium Text Medium'),
 		local('TitilliumText25L002'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L002-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L002-webfont.woff) format('woff'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L002-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L002-webfont.svg) format('svg');
+		url(/static/fonts/TitilliumText/TitilliumText25L002-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/TitilliumText/TitilliumText25L002-webfont.woff) format('woff'),
+		url(/static/fonts/TitilliumText/TitilliumText25L002-webfont.ttf) format('ttf'),
+		url(/static/fonts/TitilliumText/TitilliumText25L002-webfont.svg) format('svg');
 }
 
 @font-face {
 	font-family: 'Titillium';
 	font-style: normal;
 	font-weight: 700;
-	src: url(/library/static/fonts/TitilliumText/TitilliumText25L001-webfont.eot);
+	src: url(/static/fonts/TitilliumText/TitilliumText25L001-webfont.eot);
 	src: local('Titillium Text Bold'),
 		local('TitilliumText25L001'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L001-webfont.eot) format('embedded-opentype'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L001-webfont.woff) format('woff'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L001-webfont.ttf) format('ttf'),
-		url(/library/static/fonts/TitilliumText/TitilliumText25L001-webfont.svg) format('svg');
+		url(/static/fonts/TitilliumText/TitilliumText25L001-webfont.eot) format('embedded-opentype'),
+		url(/static/fonts/TitilliumText/TitilliumText25L001-webfont.woff) format('woff'),
+		url(/static/fonts/TitilliumText/TitilliumText25L001-webfont.ttf) format('ttf'),
+		url(/static/fonts/TitilliumText/TitilliumText25L001-webfont.svg) format('svg');
 }

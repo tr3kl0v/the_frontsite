@@ -163,12 +163,19 @@ module.exports = function(grunt) {
 		// Compass watch
 		compass: {
 			website1: {
-				options: {   
+				options: {
+					httpPath: '/',
 					basePath: '<%= cvars.lib_dir %>/styles/website1',
 					sassDir: 'sass',
-					cssDir: '../../../../public/static/css',
-					fontsDir: 'public/static/fonts',
-					environment: 'development'
+					cssDir: '../../../../public/website1/static/css',
+					fontsDir: '/lib/styles/website1/fonts',
+					httpFontsDir: '/static/fonts',
+					httpFontsPath: '/static/fonts',
+					imagesDir: '../../../../public/website1/static/images',
+					javascriptsDir: '../../../../public/website1/static/js',
+					environment: 'development',
+					outputStyle: 'compressed',
+					raw: 'preferred_syntax = :sass\n'
 				}
 			}
 		},
