@@ -3,9 +3,11 @@ var fs = require('fs'),
 	path = require('path'),
 	uglify = require('uglify-js'),
 	dust = require('dustjs-linkedin');
+
+var submoduleFolder = path.join(__dirname, '../../', 'lib', 'templates', 'modules');
+
 	
 function initModules() {
-	var submoduleFolder = path.join(__dirname, '../../../', 'templates', 'submodules');
 	walk.sync(submoduleFolder, function(filepath, stat) {
 		if (path.extname(filepath) === ".dust") {
 			compileJs(filepath);
@@ -15,8 +17,8 @@ function initModules() {
 
 function compileJs(filepath) {
 	var moduleFolder = path.join(filepath, '../../'),
-		baseFolder = path.join(moduleFolder, '../../../../'),
-		jsFolders = ['embase', 'frontside', 'pathwaystudio', 'pharmapendium', 'quosabrowser', 'quosaVL', 'reaxys', 'reaxysmedicinalchemistry', 'targetinsights'];
+		baseFolder = path.join(moduleFolder, '../../../../../'),
+		jsFolders = ['website1'];
 
 	//Compile Template to Javascript
 	var uncompiled = fs.readFileSync(filepath, 'ascii'),
@@ -29,7 +31,7 @@ function compileJs(filepath) {
 		compiledBackbone = jsData + compiledDust;
 
 	for(var i = 0; i < jsFolders.length; i++){
-		var folderToCopy = path.join(baseFolder, jsFolders[i], 'static', 'js', 'submodules', templateName + '.js')
+		var folderToCopy = path.join(baseFolder, 'public', jsFolders[i], 'static', 'js', 'submodules', templateName + '.js')
 		fs.writeFileSync(folderToCopy, compiledBackbone);
 		var timestamp = new Date().toLocaleString() // add time stamp to console
 		console.log(timestamp + ': Dust view compiled: ' + folderToCopy);

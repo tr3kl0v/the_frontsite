@@ -8,7 +8,6 @@ var modulesFolder = path.join(__dirname, '../../', 'lib', 'templates', 'modules'
 
 
 function initModules() {
-
 	walk.sync(modulesFolder, function(filepath, stat) {
 		if (path.extname(filepath) === ".dust") {
 			compileJs(filepath);

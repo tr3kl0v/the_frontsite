@@ -10,7 +10,6 @@ var pagesFolder = path.join(__dirname, '../../', 'lib', 'templates', 'pages');
 var modules = [];
 
 function initPages() {
-
 	walk.sync(pagesFolder, function(filepath, stat) {
 		if (filepath.indexOf(".svn") === -1 && filepath.indexOf("dust") > -1) {
 			var product = path.dirname(filepath.slice(filepath.lastIndexOf('pages')+6));
