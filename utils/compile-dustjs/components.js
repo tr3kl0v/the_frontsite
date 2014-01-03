@@ -6,39 +6,41 @@ var fs = require('fs'),
 	os = require('os'),
 	dust = require('dustjs-linkedin');
 	
-var baseFolder =  path.join(__dirname, '../../../'),
-	componentFolder = path.join(__dirname, '../../../', 'lib', 'templates', 'components'),
+var componentFolder = path.join(__dirname, '../../', 'lib', 'templates', 'components'),
+	confFolder = path.join(__dirname, '../../', 'conf');
 	products = [];
 
 
 //Determine how many products there are
 function getProducts(){
-	//Get all top-level folders in the Ui-platform
-	var files = fs.readdirSync(baseFolder)
+	var filepath = path.join(confFolder, 'products.json');
 
-	//run through all files
-	files.map(function(file){
-		//Do not include hidden files
-		if(file.indexOf('.') <= -1){
-			//don't include the library
-			if(file != 'library'){
-				//Put all other files in the products array
-				products.push(file)
-			}
+	fs.readFile(filepath, 'utf8', function (err, data) {
+
+		if (err) {
+			console.log('Error: ' + err);
+			return;
 		}
-	});
+		
+		data = JSON.parse(data);
 
-	//Now start compiling files
-	initComponents();
+		var keys = Object.keys( data.hosts );
+		for (var i=0, length=keys.length; i<length; i++) {
+			products.push(keys[ i ]);
+
+		}
+		//Now start compiling files
+		initComponents();
+	});
 }
 
 function initComponents(){
+console.log(products);
+
 	products.map(function(product){
 		var currentProduct = path.join(componentFolder, product),
 			generalFolder = path.join(componentFolder, 'general'),
 			componentFile = "";
-
-		console.log(currentProduct);
 
 		//Walkthrough product specific components and compile them
 		walk.sync(currentProduct, function(filepath, stat){
@@ -53,7 +55,7 @@ function initComponents(){
 		})
 
 		//When all components are added create file
-		var fileToCreate = path.join(baseFolder, product, 'static', 'js', "components.js");
+		var fileToCreate = path.join(process.cwd(), '../../', 'public', product, 'static', 'js', "components.js");
 		fs.writeFileSync(fileToCreate, componentFile);
 
 

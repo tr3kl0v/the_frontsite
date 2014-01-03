@@ -30,7 +30,7 @@ function compileJs(filepath) {
 		jsData = fs.readFileSync(backboneFile, 'ascii'),
 		compiledBackbone = jsData + compiledDust;
 
-	for(var i = 0; i < jsFolders.length; i++){
+	for (var i = 0; i < jsFolders.length; i++) {
 		var folderToCopy = path.join(baseFolder, 'public', jsFolders[i], 'static', 'js', 'submodules', templateName + '.js')
 		fs.writeFileSync(folderToCopy, compiledBackbone);
 		var timestamp = new Date().toLocaleString() // add time stamp to console
