@@ -35,7 +35,6 @@ function getProducts(){
 }
 
 function initComponents(){
-console.log(products);
 
 	products.map(function(product){
 		var currentProduct = path.join(componentFolder, product),

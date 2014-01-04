@@ -8,10 +8,10 @@ module.exports = function(grunt) {
 		"build": "build",
 		"dist_www": "./public",
 		"bower_soure": "./bower_components",
-		"dist_bower": "./public/static/js/vendor",
-		"lib_dir": "./lib/templates",
+		"dist_bower": "./public/website1/static/js/vendor",
+		"lib_dir": "./lib/",
 		"utils_folder": "./utils/compile-dustjs",
-		"log_folder": "./logs/"
+		"log_folder": "./logs"
 	};
 
 
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
 		// Watch to precompile
 		watch: {
 			scss: {
-				files: ['<%= cvars.lib_dir %>/modules/**/*.scss', '<%= cvars.lib_dir %>/submodules/**/*.scss'],
+				files: ['<%= cvars.lib_dir %>templates/modules/**/*.scss', '<%= cvars.lib_dir %>templates/submodules/**/*.scss'],
 				tasks: 'compass'
 			},
 			website1scss: {
@@ -86,19 +86,19 @@ module.exports = function(grunt) {
 				tasks: 'compass:website1'
 			},
 			modules: {
-				files: ['<%= cvars.lib_dir %>/modules/**/*.dust', '<%= cvars.lib_dir %>/modules/**/*.js'],
+				files: ['<%= cvars.lib_dir %>templates/modules/**/*.dust', '<%= cvars.lib_dir %>templates/modules/**/*.js'],
 				tasks: ['exec:modules','jshint:modules']
 			},
 			submodules: {
-				files: ['<%= cvars.lib_dir %>/submodules/**/*.dust', '<%= cvars.lib_dir %>/submodules/**/*.js'],
+				files: ['<%= cvars.lib_dir %>templates/submodules/**/*.dust', '<%= cvars.lib_dir %>templates/submodules/**/*.js'],
 				tasks: ['exec:submodules', 'jshint:submodules']
 			},
 			components: {
-				files: ['<%= cvars.lib_dir %>/components/**/*.dust', '<%= cvars.lib_dir %>/components/**/*.js'],
+				files: ['<%= cvars.lib_dir %>templates/components/**/*.dust', '<%= cvars.lib_dir %>templates/components/**/*.js'],
 				tasks: ['exec:components']
 			},
 			pages: {
-				files: ['<%= cvars.lib_dir %>/pages/**/*.dust'],
+				files: ['<%= cvars.lib_dir %>templates/pages/**/*.dust'],
 				tasks: ['exec:pages']
 			},
 			utilities: {

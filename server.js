@@ -1,5 +1,12 @@
 /*───────────────────────────────────────────────────────────────────────────*\
-│  Copyright (C) 2013 Paapster                                                │
+│                                                                             │
+│    _____ _             __                 _   __ _     _                    │
+│   /__   \ |__   ___   / _|_ __ ___  _ __ | |_/ _(_) __| | ___               │
+│     / /\/ '_ \ / _ \ | |_| '__/ _ \| '_ \| __\ \| |/ _` |/ _ \              │
+│    / /  | | | |  __/ |  _| | | (_) | | | | |__\ \ | (_| |  __/              │
+│    \/   |_| |_|\___| |_| |_|  \___/|_| |_|\__\__/_|\__,_|\___|              │
+│                                                                             │
+│   Copyright (C) 2012-2014 Paapster                                          │
 │                                                                             │
 │   Licensed under the Apache License, Version 2.0 (the "License");           │
 │   you may not use this file except in compliance with the License.          │
@@ -14,20 +21,27 @@
 │   limitations under the License.                                            │
 \*───────────────────────────────────────────────────────────────────────────*/
 
-
 // startup arguments
 var args = process.argv.splice(2).toString();
 
 // Dependencies
 var walk = require('walkdir'),
-	path = require('path'),
+	path = require('path');
+
+require('colors');
 
 // Print Logo
-logo = require('./routes/logo');
-logo.print();
+console.log("");
+console.log(" _____ _             __                 _   __ _     _      ".yellow.bold);
+console.log("/__   \\ |__   ___   / _|_ __ ___  _ __ | |_/ _(_) __| | ___ ".yellow.bold);
+console.log("  / /\\/ '_ \\ / _ \\ | |_| '__/ _ \\| '_ \\| __\\ \\| |/ _` |/ _ \\".green.bold);
+console.log(" / /  | | | |  __/ |  _| | | (_) | | | | |__\\ \\ | (_| |  __/".blue.bold);
+console.log(" \\/   |_| |_|\\___| |_| |_|  \\___/|_| |_|\\__\\__/_|\\__,_|\\___|".magenta.bold);
+console.log("");
 
 
-if (args == "all"){
+// Start all websites
+if (args === "all"){
 
 	var configFolder = path.join(__dirname, '../')
 
@@ -40,9 +54,9 @@ if (args == "all"){
 		}
 	})
 }
-else if (args == 'tests') {
-	require('./tests/app');
-}
+
+// Start argumented site
 else {
-	var product = require('../' + args + '/server/app');
+	var product = require('./private/' + args + '/server/app');
 }
+
