@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/paapster/the_frontsite.png?branch=master)](https://travis-ci.org/paapster/the_frontsite)
 [![Dependency Status](https://david-dm.org/paapster/the_frontsite.png)](https://david-dm.org/paapster/the_frontsite)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 
 [The FrontSite](http://paapster.nl/) - Running FE in browser or on the server
