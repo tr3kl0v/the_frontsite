@@ -1,14 +1,13 @@
+<img src="http://www.paapster.nl/fs-logo-large.png"><br />
+
+
 [![Build Status](https://travis-ci.org/paapster/the_frontsite.png?branch=master)](https://travis-ci.org/paapster/the_frontsite)
 [![Dependency Status](https://david-dm.org/paapster/the_frontsite.png)](https://david-dm.org/paapster/the_frontsite)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-
-[The FrontSite](http://paapster.nl/) - Running FE in browser or on the server
-==================================================
-=============
-
 The FrontSide is a platform for creating FE applications which can run in the browser and on the server. 
 
+## Getting Started
 What you need to build your own FrontSite
 --------------------------------------
 
