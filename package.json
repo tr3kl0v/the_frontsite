@@ -57,7 +57,6 @@
     "grunt-exec": "~0.4.3",
     "grunt-dust": "~0.5.4",
     "grunt-open": "~0.2.2",
-    "grunt-template-jasmine-requirejs": "~0.1.8",
     "grunt-templater": "~0.0.4",
     "grunt-usemin": "~0.1.11",
     "load-grunt-tasks": "~0.1.0"

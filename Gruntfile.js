@@ -115,10 +115,6 @@ module.exports = function(grunt) {
 				options: {
 					specs: ['/test/general/*.spec.js', '/test/website1/*.spec.js'],
 					host: 'http://127.0.0.1:8000/',
-					template: require('grunt-template-jasmine-requirejs'),
-					templateOptions: {
-						requireConfigFile:'test/scripts.js'
-					}
 				}
 			}
 		},
