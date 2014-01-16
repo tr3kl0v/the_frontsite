@@ -7,7 +7,7 @@
     	"backbone": "1.1.0",
     	"lodash": "2.4.1",
     	"modernizr": "2.7.1",
-    	"dustjs-linkedin": "2.2.3",
+    	"dustjs-linkedin": "2.2.4",
     	"dustjs-linkedin-helpers": "1.1.1"
     },
     "private": true

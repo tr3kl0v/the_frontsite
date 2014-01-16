@@ -1,7 +1,6 @@
+/* global module:false */
 module.exports = function(grunt) {
 	'use strict';
-
-	require('load-grunt-tasks')(grunt);
 
 	// Config variables
 	var configVars = {
@@ -19,6 +18,12 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json', 'bower.json'),
+
+		banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
+		'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+		'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+		' Released under the <%= pkg.licenses.type %> License */\n',
+
 		cvars: configVars,
 		
 		// Bower setup
@@ -109,16 +114,55 @@ module.exports = function(grunt) {
 
 
 		// Testing
-		jasmine : {
-			website1: {
-				src : ['/public/static/js/frontside.js', '/lib/templates/modules/website1/**/*.js'],
+		connect: {
+			testServer: {
 				options: {
-					specs: ['/test/general/*.spec.js', '/test/website1/*.spec.js'],
-					host: 'http://127.0.0.1:8000/',
+					port: 3000,
+					keepalive: true
 				}
 			}
 		},
 
+		// Testing
+		jasmine: {
+			allTests: {
+				src: 'public/website1/static/js/frontside.js',
+				options: {
+					specs: ['test/jasmine-test/spec/**/*.js'],
+					template: require('grunt-template-jasmine-istanbul'),
+					templateOptions: {
+						coverage: 'tmp/coverage/coverage.json',
+						report: 'tmp/coverage'
+					}
+				}
+			}
+		},
+
+		log: {
+			coverage: {
+				options: {
+					message: 'Coverage is run with `grunt test`. Look inside tmp/coverage'
+				}
+			},
+			copyForRelease: {
+				options: {
+					message: 'OK. Done copying version <%= pkg.version %> build from tmp to dist'
+				}
+			},
+			testClient: {
+				options: {
+					message: 'go to http://localhost:<%= connect.testServer.options.port %>/_SpecRunner.html.\n Ctrl-C to kill the server.'
+				}
+			},
+			release: {
+				options: {
+					message: ['OK. Done bumping, adding, committing, tagging and pushing the new version',
+					'',
+					'You still need to manually do the following:',
+					'  * npm publish'].join('\n')
+				}
+			}
+		},
 
 		// JS Lint validation
 		jshint: {
@@ -177,23 +221,43 @@ module.exports = function(grunt) {
 		},
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-requirejs');
+//	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-bower-task');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-exec');
-	grunt.loadNpmTasks('grunt-dust');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-dust');
+	grunt.loadNpmTasks('grunt-exec');
+
+	grunt.loadNpmTasks('grunt-gh-pages');
+	grunt.loadNpmTasks('grunt-bump');
+	grunt.loadNpmTasks('grunt-shell');
+
+
 
 	
 	// Default task(s).
 	grunt.registerTask('default', ['exec:remove_logs', 'watch', 'compass', 'jshint', 'dust', 'exec', 'concat']);
 
 	// Grunt testing
-	grunt.registerTask('test', ['jasmine']);
+	//grunt.registerTask('test', ['clean:specRunner', 'build', 'jasmine', 'shell:oldTests', 'testRhino']);
+	//grunt.registerTask('testNode', ['shell:oldTests']);
+	//grunt.registerTask('testClient', ['build', 'jasmine:allTests:build', 'log:testClient', 'connect:testServer']);
+	grunt.registerTask('testClient', ['jasmine:allTests', 'log:testClient', 'connect:testServer']);
+
+	
+  	// Custom tasks
+	grunt.registerMultiTask('log', 'Print some messages', function() {
+		grunt.log.writeln(this.data.options.message);
+	});
+	grunt.registerTask('coverage', ['log:coverage']);
 
 	// BASIC TASKS
 	grunt.registerTask('setup', ['bower:setup', 'exec:remove_logs']);
