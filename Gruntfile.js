@@ -26,6 +26,17 @@ module.exports = function(grunt) {
 
 		cvars: configVars,
 		
+		// Task configuration.
+		shell: {
+			oldTests: {
+				command: 'node test/server.js',
+				options: {
+					stdout: true,
+					failOnError: true
+				}
+			}
+		},
+
 		// Bower setup
 		bower: {
 			setup: {
