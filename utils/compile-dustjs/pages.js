@@ -41,7 +41,8 @@ function checkData(data, templateName, product){
 		moduleObject['position'] = position;
 		modules.push(moduleObject);
 		checkData(newData, templateName, product);
-	} else {
+	}
+	else {
 		checkFolderExists(data, templateName, product);
 	}
 }
@@ -55,7 +56,8 @@ function getModuleName(data){
 function getPosition(data, module){
 	if (module == 'head'){
 		var	position = "head";
-	} else {
+	}
+	else {
 		var trimmedData = data.slice(0, data.indexOf("{>" + module + " /}")),
 			trimmedId = trimmedData.slice(trimmedData.lastIndexOf('id=')),
 			position = "#" + trimmedId.slice(trimmedId.indexOf('"')+1, trimmedId.indexOf('"', trimmedId.indexOf('"')+1))
@@ -68,7 +70,7 @@ function checkFolderExists(data, templateName, product) {
 	
 	fs.exists(folder, function (exists) {
 		if (!exists) {
-			console.log(baseFolder)
+			//console.log(baseFolder)
 			mkdirp(folder, function (err) {
 				if (err) console.error(err)
 			});
@@ -89,7 +91,8 @@ function createFiles(data, templateName, product){
 		if (err) {
 			console.log(timestamp + ': Failed to Copy: ' + fileToCopy + err)
 
-		} else{
+		}
+		else {
 			console.log(timestamp + ': View copied to: ' + fileToCopy);
 		}
 	});
