@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 
 
 	require('time-grunt')(grunt);
-	
+
 	// Project configuration.
 	grunt.initConfig({
 
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		' Released under the <%= pkg.licenses.type %> License */\n',
 
 		cvars: configVars,
-		
+
 		// Task configuration.
 		shell: {
 			oldTests: {
@@ -92,7 +92,7 @@ module.exports = function(grunt) {
 				]
 			}
 		},
-		
+
 		// Watch to precompile
 		watch: {
 			scss: {
@@ -255,7 +255,7 @@ module.exports = function(grunt) {
 
 
 
-	
+
 	// Default task(s).
 	grunt.registerTask('default', ['exec:remove_logs', 'watch', 'compass', 'jshint', 'dust', 'exec', 'concat']);
 
@@ -265,7 +265,7 @@ module.exports = function(grunt) {
 	//grunt.registerTask('testClient', ['build', 'jasmine:allTests:build', 'log:testClient', 'connect:testServer']);
 	grunt.registerTask('testClient', ['jasmine:allTests', 'log:testClient', 'connect:testServer']);
 
-	
+
   	// Custom tasks
 	grunt.registerMultiTask('log', 'Print some messages', function() {
 		grunt.log.writeln(this.data.options.message);
