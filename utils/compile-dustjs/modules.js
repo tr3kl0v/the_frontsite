@@ -3,7 +3,7 @@ var fs = require('fs'),
 	path = require('path'),
 	uglify = require('uglify-js'),
 	dust = require('dustjs-linkedin');
-	
+
 var modulesFolder = path.join(__dirname, '../../', 'lib', 'templates', 'modules');
 
 
@@ -24,7 +24,7 @@ function compileJs(filepath){
 		baseFolder = path.join(moduleFolder, '../../../../../'),
 		product = path.basename(path.join(moduleFolder, '../')),
 		jsFolders = [];
-		
+
 	var uncompiled = fs.readFileSync(filepath, 'ascii'),
 		templateName = path.basename(filepath, '.dust'),
 		compiledDust = dust.compile(uncompiled, templateName),

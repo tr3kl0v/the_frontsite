@@ -5,7 +5,7 @@ var fs = require('fs'),
 	program = require('commander'),
 	os = require('os'),
 	dust = require('dustjs-linkedin');
-	
+
 var componentFolder = path.join(__dirname, '../../', 'lib', 'templates', 'components'),
 	confFolder = path.join(__dirname, '../../', 'conf');
 	products = [];
@@ -21,7 +21,7 @@ function getProducts(){
 			console.log('Error: ' + err);
 			return;
 		}
-		
+
 		data = JSON.parse(data);
 
 		var keys = Object.keys( data.hosts );

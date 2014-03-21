@@ -3,38 +3,38 @@
 ---------------------------------------------- */
 html {height:100%;width:100%;}
 	body {background:$bodyBackgroundColor; font-family:$generalFont; font-size:$generalFontSize; height:100%; line-height:$generalLineHeight; letter-spacing:$generalFontLetterSpacing; margin:0; padding:41px 0 0; text-align:left; width:$bodyWidth;}
-		
+
 		/*   Dialogs
 		---------------------------------------------- */
 		#overlay {background:#000; display:none; height:100%; @include opacity(0.6); left:0; position:fixed; top:0; width:100%; z-index:2000;}
 		#pop-ups {display:none; overflow:auto; margin:0 30%; position:fixed; top:50px; width:40%; z-index:3000;}
-		
+
 		/*   Wrapper
 		---------------------------------------------- */
 		#wrapper {background-color:$mainWrapperBackgroundColor; min-height:425px;
 			&:after {content:""; display:table; clear:both;}
 
-		}			
+		}
 
 
 			/*   Main
 			---------------------------------------------- */
 			#mainWrapper {font-size:1em; margin:0 auto; max-width:984px;
-				&.fullPage {margin:0; max-width:100%; padding:0;} 
+				&.fullPage {margin:0; max-width:100%; padding:0;}
 			}
 
 				.contentWrapper {
 					&:after {content:""; display:table; clear:both;}
 				}
-					
+
 					.columns {float:left; width:100%;
 						.col {@include box-sizing(border-box); float:left; padding:0 10px;}
-					}	
-						
+					}
+
 					.oneCol {
 						.col {width:100%;}
 					}
-					
+
 					.twoCol {
 						.col {width:50%;}
 						.oneThird {width:33%;}
@@ -67,7 +67,7 @@ html {height:100%;width:100%;}
 				.leftCol {float:left; min-height:1px;}
 				.midCol {@include box-sizing(border-box); float:left; min-height:1px;}
 				.rightCol {@include box-sizing(border-box); float:left; min-height:1px;}
-				
+
 				#rowTwo, #rowThree, #rowFour {}
 				.twoCol {width:100%;overflow:auto;
 					.leftCol {padding-right:10px; width:50%;}

@@ -5,7 +5,7 @@ var fs = require('fs'),
 	program = require('commander'),
 	os = require('os'),
 	dust = require('dustjs-linkedin');
-	
+
 var pagesFolder = path.join(__dirname, '../../', 'lib', 'templates', 'pages');
 var modules = [];
 
@@ -36,7 +36,7 @@ function checkData(data, templateName, product){
 			position = getPosition(data, module),
 			newData = data.replace("{>" + module + " /}", ""),
 			moduleObject = new Object();
-		
+
 		moduleObject['moduleName'] = module;
 		moduleObject['position'] = position;
 		modules.push(moduleObject);
@@ -67,7 +67,7 @@ function getPosition(data, module){
 
 function checkFolderExists(data, templateName, product) {
 	var folder = path.join(process.cwd(), '../../', 'public', product, 'static', 'views');
-	
+
 	fs.exists(folder, function (exists) {
 		if (!exists) {
 			//console.log(baseFolder)
@@ -84,7 +84,7 @@ function checkFolderExists(data, templateName, product) {
 
 function createFiles(data, templateName, product){
 	var folder = path.join(process.cwd(), '../../', 'public', product, 'static', 'views'),
-		fileToCopy = path.join(folder, templateName + '.dust');	
+		fileToCopy = path.join(folder, templateName + '.dust');
 
 	fs.writeFile(fileToCopy, data, function (err) {
 		var timestamp = new Date().toLocaleString() // add time stamp to console
@@ -97,9 +97,9 @@ function createFiles(data, templateName, product){
 		}
 	});
 
-	var config = 'var modules=' +  JSON.stringify(modules);	
+	var config = 'var modules=' +  JSON.stringify(modules);
 	var configPath = path.join(process.cwd(), '../../', 'public', product, 'static', 'data', 'config', templateName + '.js');
-	
+
 	fs.writeFile(configPath, config, function (err) {
 		var timestamp = new Date().toLocaleString() // add time stamp to console
 		if (err) console.error(err);

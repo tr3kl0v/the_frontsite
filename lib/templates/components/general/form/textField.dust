@@ -8,11 +8,11 @@
 				{/required}
 			</label>
 		{/label}
-		<input name="{id}" id="{id}" class="text{#status} {status}{/status}" type="text" 
-			{#autofocus}autofocus{/autofocus} 
-			{#required}required{/required} 
-			{#value}value="{value}"{/value} 
-			{#placeholder}placeholder="{placeholder}"{/placeholder} 
+		<input name="{id}" id="{id}" class="text{#status} {status}{/status}" type="text"
+			{#autofocus}autofocus{/autofocus}
+			{#required}required{/required}
+			{#value}value="{value}"{/value}
+			{#placeholder}placeholder="{placeholder}"{/placeholder}
 			{#autocomplete}autocomplete="{autocomplete}"{/autocomplete}/>
 	</section>
 {/textField}

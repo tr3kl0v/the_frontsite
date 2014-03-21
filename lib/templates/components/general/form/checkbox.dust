@@ -2,7 +2,7 @@
 	<div class="checkboxContainer">
 
 		<input class="checkbox{#status} {status}{/status}" id="{id}" {#name}name="{name}"{/name} type="checkbox" {#value}value="{value}"{/value} {#checked}checked="checked"{/checked} {#required}required{/required} />
-		
+
 		{#label}
 		<label for="{id}">{label|s}</label>
 		{/label}

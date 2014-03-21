@@ -6,7 +6,7 @@ var fs = require('fs'),
 
 var submoduleFolder = path.join(__dirname, '../../', 'lib', 'templates', 'modules');
 
-	
+
 function initModules() {
 	walk.sync(submoduleFolder, function(filepath, stat) {
 		if (path.extname(filepath) === ".dust") {
