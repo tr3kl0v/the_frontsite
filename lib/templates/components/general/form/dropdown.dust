@@ -8,7 +8,7 @@
 			{/required}
 		</label>
 		{/label}
-		
+
 		<select name="{id}" id="{id}" class="select{#status} {status}{/status}" {#size}size="{size}"{/size} {#multiple}multiple="multiple"{/multiple} {#required}required{/required}>
 			{#options}
 				<option value="{value}" {#selected}selected="selected"{/selected}>{label}</option>
