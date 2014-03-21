@@ -1,9 +1,6 @@
 var fs = require('fs'),
 	walk = require('walkdir'),
-	mkdirp = require('mkdirp'),
 	path = require('path')
-	program = require('commander'),
-	os = require('os'),
 	dust = require('dustjs-linkedin');
 
 var componentFolder = path.join(__dirname, '../../', 'lib', 'templates', 'components'),
