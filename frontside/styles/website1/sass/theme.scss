@@ -1,0 +1,27 @@
+@import "partials/base";
+@import "partials/icons";
+
+@import "../fonts/fonts";
+@import "../../general/sass/grid";
+@import "../../general/sass/helpers";
+@import "../../general/sass/forms";
+@import "../../general/sass/dialog";
+@import "../../general/sass/tables";
+
+/*   Modules
+---------------------------------------------- */
+// Main page components
+@import "../../../modules/general/footer/footer.scss";
+@import "../../../modules/general/header/header.scss";
+@import "../../../modules/general/message/message.scss";
+
+
+/*   SubModules
+---------------------------------------------- */
+@import "../../../submodules/datePicker/datePicker.scss";
+
+
+
+/*   Over rules
+---------------------------------------------- */
+.required {display:none;}

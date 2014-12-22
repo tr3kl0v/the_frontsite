@@ -1,0 +1,33 @@
+@import "partials/base";
+@import "partials/icons";
+
+@import "../fonts/fonts";
+@import "../fonts/icons";
+@import "../../general/sass/helpers";
+@import "../../general/sass/grid_mobile";
+
+@import "../../../modules/general/footer/footer_mobile.scss";
+@import "../../../modules/general/header/header_mobile.scss";
+
+
+#wrapper{background:#fff;
+	header{
+		.productLogo{
+			a{width:190px;}
+		}
+	}
+}
+#mainWrapper {
+    .leftCol > h2, .midCol > h2, .rightCol > h2{@include gradient3Color($mainProductColor, lighten($mainProductColor, 3%), lighten($mainProductColor, 6%));border:1px solid $mainProductColor; border-radius:10px 10px 0 0;color:#fff;font-size:2em;margin:0;text-align:center;}
+    #profile {width:auto;}
+}
+
+footer {
+    .text {
+        ul {
+            li {background:url("#{$assetPath}/icons/separator-footer.png") 100% 6px no-repeat;
+              &:last-child {background:none;}
+            }
+        }
+    }
+}
