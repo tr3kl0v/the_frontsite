@@ -1,20 +1,20 @@
 <article class="formWrapper" id="loginBox">
-	<h2>{title}</h2>
+    <h2>{title}</h2>
 
-	<form class="form" action="/users/login" method="post">
+    <form class="form" action="/users/login" method="post">
 
-		<p class="description">{description}</p>
-		
-		{#fields}
-			{>textField /}
-			{>passwordField /}
-		{/fields}
-		
-		{>textButton /}
-		
-		<section class="field operators">
-			{>submitButton /}
-		</section>
-		{>unorderedList /}
-	</form>
+        <p class="description">{description}</p>
+
+        {#fields}
+            {>textField /}
+            {>passwordField /}
+        {/fields}
+
+        {>textButton /}
+
+        <section class="field operators">
+            {>submitButton /}
+        </section>
+        {>unorderedList /}
+    </form>
 </article>

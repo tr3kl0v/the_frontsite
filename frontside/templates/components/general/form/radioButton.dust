@@ -1,17 +1,17 @@
 {#radioButton}
-	<div class="radioButton">
-		{#labelBefore}
-			<label for="radio_{id}">{label}</label>
-		{/labelBefore}
+    <div class="radioButton">
+        {#labelBefore}
+            <label for="radio_{id}">{label}</label>
+        {/labelBefore}
 
-		<input {#status} class="{status}"{/status} id="radio_{id}" name="radio_{name}" type="radio" {#value}value="{value}"{/value} {#checked}checked="checked"{/checked} {#required}required{/required} />
+        <input {#status} class="{status}"{/status} id="radio_{id}" name="radio_{name}" type="radio" {#value}value="{value}"{/value} {#checked}checked="checked"{/checked} {#required}required{/required} />
 
-		{#labelAfter}
-			<label for="radio_{id}">{label}</label>
-		{/labelAfter}
+        {#labelAfter}
+            <label for="radio_{id}">{label}</label>
+        {/labelAfter}
 
-		{#required}
-			<span class="required">*</span>
-		{/required}
-	</div>
+        {#required}
+            <span class="required">*</span>
+        {/required}
+    </div>
 {/radioButton}

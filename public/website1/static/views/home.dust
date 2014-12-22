@@ -1,0 +1,22 @@
+<!-- Columns -->
+<div class="columns twoCol" id="row1twoCol">
+
+
+    <!-- col1 -->
+    <div class="col twoThird" id="row1col1">
+        {#titleHomeBlock}
+
+        {/titleHomeBlock}
+    </div>
+    <!--// col1 -->
+
+    <!-- col2 -->
+    <div class="col oneThird" id="row1col2">
+        {#loginBoxHome}
+
+        {/loginBoxHome}
+    </div>
+    <!--// col2 -->
+
+</div>
+<!--// Columns -->

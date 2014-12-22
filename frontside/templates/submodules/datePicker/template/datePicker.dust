@@ -1,12 +1,12 @@
 {#datePicker}
-	<aside class="datePicker">
-		{>checkbox /}
-		{#beginDate}
-			{>calendarField /}
-		{/beginDate}
-		<span>{to}</span>
-		{#endDate}
-			{>calendarField /}
-		{/endDate}
-	</aside>
+    <aside class="datePicker">
+        {>checkbox /}
+        {#beginDate}
+            {>calendarField /}
+        {/beginDate}
+        <span>{to}</span>
+        {#endDate}
+            {>calendarField /}
+        {/endDate}
+    </aside>
 {/datePicker}

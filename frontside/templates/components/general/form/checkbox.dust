@@ -1,14 +1,14 @@
 {#checkbox}
-	<div class="checkboxContainer">
+    <div class="checkboxContainer">
 
-		<input class="checkbox{#status} {status}{/status}" id="{id}" {#name}name="{name}"{/name} type="checkbox" {#value}value="{value}"{/value} {#checked}checked="checked"{/checked} {#required}required{/required} />
+        <input class="checkbox{#status} {status}{/status}" id="{id}" {#name}name="{name}"{/name} type="checkbox" {#value}value="{value}"{/value} {#checked}checked="checked"{/checked} {#required}required{/required} />
 
-		{#label}
-		<label for="{id}">{label|s}</label>
-		{/label}
+        {#label}
+            <label for="{id}">{label|s}</label>
+        {/label}
 
-		{#required}
-			<span class="required">*</span>
-		{/required}
-	</div>
+        {#required}
+            <span class="required">*</span>
+        {/required}
+    </div>
 {/checkbox}

@@ -1,18 +1,18 @@
 {#dropdown}
-	<section class="dropdown">
-		{#label}
-		<label for="{id}">
-			{label}
-			{#required}
-				<span class="required">*</span>
-			{/required}
-		</label>
-		{/label}
+    <section class="dropdown">
+        {#label}
+            <label for="{id}">
+                {label}
+                {#required}
+                    <span class="required">*</span>
+                {/required}
+            </label>
+        {/label}
 
-		<select name="{id}" id="{id}" class="select{#status} {status}{/status}" {#size}size="{size}"{/size} {#multiple}multiple="multiple"{/multiple} {#required}required{/required}>
-			{#options}
-				<option value="{value}" {#selected}selected="selected"{/selected}>{label}</option>
-			{/options}
-		</select>
-	</section>
+        <select name="{id}" id="{id}" class="select{#status} {status}{/status}" {#size}size="{size}"{/size} {#multiple}multiple="multiple"{/multiple} {#required}required{/required}>
+            {#options}
+                <option value="{value}" {#selected}selected="selected"{/selected}>{label}</option>
+            {/options}
+        </select>
+    </section>
 {/dropdown}

@@ -1,22 +1,22 @@
 {#message}
-	<section class="message{#class} {class}{/class}">		
-		<div>
-			{>infoIcon /}
-			<div>
-				{#header}
-				<h4>{header}</h4>
-				<br />
-				{/header}
-				<span class="text">{text}</span>
-			</div>
-			
-			{?pushButton}
-				{>pushButton /}
-			{/pushButton}
+    <section class="message{#class} {class}{/class}">
+        <div>
+            {>infoIcon /}
+            <div>
+                {#header}
+                    <h4>{header}</h4>
+                    <br/>
+                {/header}
+                <span class="text">{text}</span>
+            </div>
 
-			{?closeButton}
-				{>closeButton /}
-			{/closeButton}
-		</div>
-	</section>
+            {?pushButton}
+                {>pushButton /}
+            {/pushButton}
+
+            {?closeButton}
+                {>closeButton /}
+            {/closeButton}
+        </div>
+    </section>
 {/message}
