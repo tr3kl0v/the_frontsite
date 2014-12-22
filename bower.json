@@ -1,6 +1,6 @@
 {
     "name": "the_frontside",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "dependencies": {
         "requirejs": "2.1.15",
         "jquery": "2.1.3",

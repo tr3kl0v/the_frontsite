@@ -28,27 +28,6 @@ module.exports = function (grunt) {
 
         cvars: configVars,
 
-        // Task configuration.
-        shell: {
-            oldTests: {
-                command: 'node test/server.js',
-                options: {
-                    stdout: true,
-                    failOnError: true
-                }
-            }
-        },
-
-        // Bower setup
-        bower: {
-            setup: {
-                options: {
-                    install: true,
-                    copy: false
-                }
-            }
-        },
-
         // Copy of files
         copy: {
             "dist-bower": {
@@ -125,32 +104,6 @@ module.exports = function (grunt) {
             }
         },
 
-
-        // Testing
-        connect: {
-            testServer: {
-                options: {
-                    port: 3000,
-                    keepalive: true
-                }
-            }
-        },
-
-        // Testing
-        jasmine: {
-            allTests: {
-                src: 'public/website1/static/js/frontside.js',
-                options: {
-                    specs: ['test/jasmine-test/spec/**/*.js'],
-                    template: require('grunt-template-jasmine-istanbul'),
-                    templateOptions: {
-                        coverage: 'tmp/coverage/coverage.json',
-                        report: 'tmp/coverage'
-                    }
-                }
-            }
-        },
-
         log: {
             coverage: {
                 options: {
@@ -190,7 +143,7 @@ module.exports = function (grunt) {
             modules: {
                 cwd: "<%= cvars.utils_folder %>",
                 command: 'node compile modules',
-                stdout: true,
+                stdout: true
             },
             submodules: {
                 cwd: "<%= cvars.utils_folder %>",
@@ -209,7 +162,7 @@ module.exports = function (grunt) {
             },
             remove_logs: {
                 cwd: "<%= cvars.logs_folder %>",
-                command: 'rm -rf *.log',
+                command: 'rm -rf *.log'
             }
         },
 
@@ -231,7 +184,7 @@ module.exports = function (grunt) {
                     raw: 'preferred_syntax = :sass\n'
                 }
             }
-        },
+        }
     });
 
 //	grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -240,9 +193,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -256,19 +207,6 @@ module.exports = function (grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['exec:remove_logs', 'watch', 'compass', 'jshint', 'dust', 'exec', 'concat']);
-
-    // Grunt testing
-    //grunt.registerTask('test', ['clean:specRunner', 'build', 'jasmine', 'shell:oldTests', 'testRhino']);
-    //grunt.registerTask('testNode', ['shell:oldTests']);
-    //grunt.registerTask('testClient', ['build', 'jasmine:allTests:build', 'log:testClient', 'connect:testServer']);
-    grunt.registerTask('testClient', ['jasmine:allTests', 'log:testClient', 'connect:testServer']);
-
-
-    // Custom tasks
-    grunt.registerMultiTask('log', 'Print some messages', function () {
-        grunt.log.writeln(this.data.options.message);
-    });
-    grunt.registerTask('coverage', ['log:coverage']);
 
     // BASIC TASKS
     grunt.registerTask('setup', ['bower:setup', 'exec:remove_logs']);
