@@ -21,7 +21,6 @@
     ],
     "engineStrict": true,
     "dependencies": {
-        "colors": "~1.0.3",
         "consolidate": "~0.10.0",
         "connect-mongo": "~0.4.0",
         "dustjs-helpers": "~1.5.0",
@@ -79,5 +78,5 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         }
     ],
-    "copyright": "Paapster 2014"
+    "copyright": "Paapster 2012-2014"
 }
