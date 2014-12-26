@@ -14,8 +14,6 @@ module.exports = function (grunt) {
     };
 
 
-    require('time-grunt')(grunt);
-
     // Project configuration.
     grunt.initConfig({
 
@@ -104,32 +102,6 @@ module.exports = function (grunt) {
             }
         },
 
-        log: {
-            coverage: {
-                options: {
-                    message: 'Coverage is run with `grunt test`. Look inside tmp/coverage'
-                }
-            },
-            copyForRelease: {
-                options: {
-                    message: 'OK. Done copying version <%= pkg.version %> build from tmp to dist'
-                }
-            },
-            testClient: {
-                options: {
-                    message: 'go to http://localhost:<%= connect.testServer.options.port %>/_SpecRunner.html.\n Ctrl-C to kill the server.'
-                }
-            },
-            release: {
-                options: {
-                    message: ['OK. Done bumping, adding, committing, tagging and pushing the new version',
-                        '',
-                        'You still need to manually do the following:',
-                        '  * npm publish'].join('\n')
-                }
-            }
-        },
-
         // JS Lint validation
         jshint: {
             all: ['<%= cvars.lib_dir %>/modules/**/*.js', '<%= cvars.lib_dir %>/submodules/**/*.js', 'public/static/js/extend.js', 'public/static/js/render.js'],
@@ -187,8 +159,6 @@ module.exports = function (grunt) {
         }
     });
 
-//	grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-compress');
@@ -200,16 +170,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-dust');
     grunt.loadNpmTasks('grunt-exec');
 
-    grunt.loadNpmTasks('grunt-gh-pages');
-    grunt.loadNpmTasks('grunt-bump');
-    grunt.loadNpmTasks('grunt-shell');
-
 
     // Default task(s).
     grunt.registerTask('default', ['exec:remove_logs', 'watch', 'compass', 'jshint', 'dust', 'exec', 'concat']);
 
     // BASIC TASKS
-    grunt.registerTask('setup', ['bower:setup', 'exec:remove_logs']);
+    grunt.registerTask('setup', ['exec:remove_logs']);
 
     // Update bower repository -- must run build manually before this
     grunt.registerTask('dist-bower', ['copy:dist-bower']);

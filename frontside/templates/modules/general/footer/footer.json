@@ -1,19 +1,28 @@
-{	
-	"footer" : [
-		{
-			"logo" : true / false,
-			"mainnav" : [
-				{"links" : [
-				    {"link" : "", "href" : "" }
-				]}
-			],
-			"subnav" : [
-				{"links" : [
-				    {"link" : "", "href" : "" }
-				]}
-			],
-			"disclaimer" : ""
-		}
-	]
+{
+    "footer": [
+        {
+            "logo": true,
+            "mainnav": [
+                {
+                    "links": [
+                        {
+                            "link": "",
+                            "href": ""
+                        }
+                    ]
+                }
+            ],
+            "subnav": [
+                {
+                    "links": [
+                        {
+                            "link": "",
+                            "href": ""
+                        }
+                    ]
+                }
+            ],
+            "disclaimer": ""
+        }
+    ]
 }
-		
