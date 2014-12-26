@@ -1,0 +1,149 @@
+{
+    "view engines": {
+        "dust": {
+            "module": {
+                "name": "dustjs-linkedin"
+            }
+        }
+    },
+    "express": {
+        "env": "",
+        "x-powered-by": false,
+        "views": "path:./views",
+        "mountpath": "/"
+    },
+    "middleware": {
+        "shutdown": {
+            "enabled": true,
+            "priority": 0,
+            "module": {
+                "name": "the_frontsite/middleware/shutdown",
+                "arguments": [
+                    {
+                        "timeout": 30000,
+                        "template": null
+                    }
+                ]
+            }
+        },
+        "compress": {
+            "enabled": false,
+            "priority": 10,
+            "module": "compression"
+        },
+        "favicon": {
+            "enabled": false,
+            "priority": 30,
+            "module": {
+                "name": "serve-favicon",
+                "arguments": [
+                    "resolve:the_frontsite/public/favicon.ico"
+                ]
+            }
+        },
+        "static": {
+            "enabled": true,
+            "priority": 40,
+            "module": {
+                "name": "serve-static",
+                "arguments": [
+                    "path:./public"
+                ]
+            }
+        },
+        "logger": {
+            "enabled": true,
+            "priority": 50,
+            "module": {
+                "name": "morgan",
+                "arguments": [
+                    "combined"
+                ]
+            }
+        },
+        "json": {
+            "enabled": true,
+            "priority": 60,
+            "module": {
+                "name": "body-parser",
+                "method": "json"
+            }
+        },
+        "urlencoded": {
+            "enabled": true,
+            "priority": 70,
+            "module": {
+                "name": "body-parser",
+                "method": "urlencoded",
+                "arguments": [
+                    {
+                        "extended": true
+                    }
+                ]
+            }
+        },
+        "multipart": {
+            "enabled": true,
+            "priority": 80,
+            "module": "the_frontsite/middleware/multipart"
+        },
+        "cookieParser": {
+            "enabled": false,
+            "priority": 90,
+            "module": {
+                "name": "cookie-parser",
+                "arguments": [
+                    "keyboard cat"
+                ]
+            }
+        },
+        "session": {
+            "enabled": true,
+            "priority": 100,
+            "module": {
+                "name": "express-session",
+                "arguments": [
+                    {
+                        "key": "",
+                        "secret": "keyboard cat",
+                        "cookie": {
+                            "path": "/",
+                            "httpOnly": true,
+                            "maxAge": null
+                        },
+                        "resave": true,
+                        "saveUninitialized": true,
+                        "proxy": null
+                    }
+                ]
+            }
+        },
+        "appsec": {
+            "enabled": false,
+            "priority": 110,
+            "module": {
+                "name": "lusca",
+                "arguments": [
+                    {
+                        "csrf": true,
+                        "xframe": "SAMEORIGIN",
+                        "p3p": false,
+                        "csp": false
+                    }
+                ]
+            }
+        },
+        "router": {
+            "enabled": true,
+            "priority": 120,
+            "module": {
+                "name": "express-enrouten",
+                "arguments": [
+                    {
+                        "index": "path:./routes"
+                    }
+                ]
+            }
+        }
+    }
+}
