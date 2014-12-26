@@ -22,13 +22,15 @@
  \*───────────────────────────────────────────────────────────────────────────*/
 'use strict';
 
+var Bluebird = require('bluebird');
+var path = require('path');
+var express = require('express');
+var bootstrap = require('./lib/bootstrap');
+var debug = require('debuglog')('FrontSite');
+
 
 // startup arguments
 var args = process.argv.splice(2).toString();
-
-// Dependencies
-var walk = require('walkdir'),
-    path = require('path');
 
 
 // Print Logo
@@ -40,6 +42,8 @@ console.log(" / /  | | | |  __/ |  _| | | (_) | | | | |__\\ \\ | (_| |  __/");
 console.log(" \\/   |_| |_|\\___| |_| |_|  \\___/|_| |_|\\__\\__/_|\\__,_|\\___|");
 console.log(" ");
 
-// Start argumented site
-var product = require('./private/' + args + '/server/app');
+function noop(obj, cb) {
+    cb(null, obj);
+}
+
 

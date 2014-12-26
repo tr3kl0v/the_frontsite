@@ -29,7 +29,7 @@ var path = require('path'),
 
 
 //Config File
-    , config = require('./config')
+    , config = require('./server/config')
     , product = 'website1';
 
 //Connect to database
