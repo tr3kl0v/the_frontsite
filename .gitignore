@@ -18,4 +18,4 @@
 _SpecRunner.*
 
 node_modules
-lib
+lib/

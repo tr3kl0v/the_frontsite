@@ -26,7 +26,7 @@ var Bluebird = require('bluebird');
 var path = require('path');
 var express = require('express');
 var bootstrap = require('./lib/bootstrap');
-var debug = require('debuglog')('FrontSite');
+var debug = require('debuglog')('FrontSide');
 
 
 // startup arguments
